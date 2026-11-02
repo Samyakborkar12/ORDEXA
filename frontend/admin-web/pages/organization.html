@@ -1,0 +1,294 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Organization - ORDEXA</title>
+
+    <link rel="stylesheet" href="../css/organization.css">
+
+    <link rel="icon" type="image/svg+xml" href="../assets/logo/ordexa-favicon.svg">
+</head>
+
+<body>
+
+
+<!-- ================= HEADER ================= -->
+
+<header class="topbar">
+
+    <div class="logo">
+        <img src="../assets/logo/ordexa-logo.svg" alt="ORDEXA" class="sidebar-logo-img">
+        ORD<span>EXA</span>
+    </div>
+
+    <div class="admin-info">
+
+        <div class="admin-circle" id="adminInitial">
+            A
+        </div>
+
+        <span id="adminName">
+            Admin
+        </span>
+
+    </div>
+
+</header>
+
+
+<!-- ================= MAIN ================= -->
+
+<main class="page">
+
+
+    <!-- ================= HEADING ================= -->
+
+    <div class="heading">
+
+        <h1 id="pageTitle">
+            Set Up Your Organization
+        </h1>
+
+        <p id="pageSubtitle">
+            Select the type of organization you want to manage with ORDEXA.
+        </p>
+
+    </div>
+
+
+    <!-- ================= STEP ================= -->
+
+    <div class="step">
+
+        <div class="step-number">
+            1
+        </div>
+
+        <div class="step-text" id="stepText">
+            Select Organization Type
+        </div>
+
+    </div>
+
+
+    <!-- ================= ORGANIZATION TYPES ================= -->
+
+    <div class="type-grid">
+
+
+        <!-- HOSPITAL -->
+
+        <div
+            class="type-card"
+            data-type="HOSPITAL"
+            onclick="selectType('HOSPITAL')">
+
+            <div class="type-icon">
+                🏥
+            </div>
+
+            <h3>
+                Hospital
+            </h3>
+
+            <p>
+                Manage hospital queues,
+                departments and patient services.
+            </p>
+
+        </div>
+
+
+        <!-- BANK -->
+
+        <div
+            class="type-card"
+            data-type="BANK"
+            onclick="selectType('BANK')">
+
+            <div class="type-icon">
+                🏦
+            </div>
+
+            <h3>
+                Bank
+            </h3>
+
+            <p>
+                Manage banking counters,
+                customers and service queues.
+            </p>
+
+        </div>
+
+
+        <!-- GOVERNMENT -->
+
+        <div
+            class="type-card"
+            data-type="GOVERNMENT"
+            onclick="selectType('GOVERNMENT')">
+
+            <div class="type-icon">
+                🏛️
+            </div>
+
+            <h3>
+                Government Office
+            </h3>
+
+            <p>
+                Manage citizen services,
+                counters and public queues.
+            </p>
+
+        </div>
+
+
+        <!-- CUSTOM -->
+
+        <div
+            class="type-card"
+            data-type="CUSTOM"
+            onclick="selectType('CUSTOM')">
+
+            <div class="type-icon">
+                🔧
+            </div>
+
+            <h3>
+                Custom
+            </h3>
+
+            <p>
+                Configure a custom organization
+                for your own workflow.
+            </p>
+
+            <span class="coming-soon">
+                COMING SOON
+            </span>
+
+        </div>
+
+    </div>
+
+
+    <!-- ================= FORM ================= -->
+
+    <div class="form-card">
+
+
+        <div class="form-title">
+
+            <h2 id="formTitle">
+                Organization Details
+            </h2>
+
+            <p id="formSubtitle">
+                Enter the basic information of your organization.
+            </p>
+
+        </div>
+
+
+        <div
+            id="message"
+            class="message">
+        </div>
+
+
+        <div class="form-grid">
+
+
+            <!-- TYPE -->
+
+            <div class="field">
+
+                <label>
+                    Organization Type
+                </label>
+
+                <div
+                    id="selectedType"
+                    class="selected-type">
+
+                    Select an organization type above
+
+                </div>
+
+            </div>
+
+
+            <!-- NAME -->
+
+            <div class="field">
+
+                <label for="organizationName">
+                    Organization Name *
+                </label>
+
+                <input
+                    type="text"
+                    id="organizationName"
+                    placeholder="Enter organization name"
+                    maxlength="150">
+
+            </div>
+
+
+            <!-- DESCRIPTION -->
+
+            <div class="field full">
+
+                <label for="description">
+                    Description
+                </label>
+
+                <textarea
+                    id="description"
+                    placeholder="Brief description of your organization..."
+                    maxlength="500"></textarea>
+
+            </div>
+
+
+        </div>
+
+
+        <!-- ================= FOOTER ================= -->
+
+        <div class="form-footer">
+
+            <button
+                class="btn-secondary"
+                onclick="logout()">
+
+                Logout
+
+            </button>
+
+
+            <button
+                id="continueButton"
+                class="btn-primary"
+                onclick="saveOrganization()"
+                disabled>
+
+                Continue to Dashboard →
+
+            </button>
+
+        </div>
+
+    </div>
+
+</main>
+
+
+<script src="../js/organization.js" defer></script>
+
+</body>
+</html>

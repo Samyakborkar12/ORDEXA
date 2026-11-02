@@ -1,0 +1,286 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ORDEXA - Home</title>
+
+    <link rel="stylesheet" href="../css/home.css">
+    <link rel="icon" type="image/svg+xml" href="../assets/logo/ordexa-favicon.svg">
+</head>
+
+<body>
+
+<!-- HEADER -->
+
+<header class="header">
+
+    <div class="logo">
+            <img src="../assets/logo/ordexa-logo.svg" alt="ORDEXA" class="welcome-logo-img">
+            <span>ORDEXA</span>
+        </div>
+
+    <div class="header-right">
+
+        <div class="notification"
+             onclick="openNotifications()"
+             title="Notifications">
+            🔔
+        </div>
+
+        <div class="profile" onclick="openProfile()">
+
+            <div class="avatar" id="avatar">
+                U
+            </div>
+
+            <div class="profile-name" id="profileName">
+                User
+            </div>
+
+        </div>
+
+    </div>
+
+</header>
+
+
+<!-- MAIN -->
+
+<main class="main">
+
+    <!-- WELCOME -->
+
+    <section class="welcome">
+
+        <h1>
+            Hello, <span id="userName">User</span> 👋
+        </h1>
+
+        <p>
+            Manage your queues and find services near you.
+        </p>
+
+    </section>
+
+
+    <!-- SEARCH -->
+
+    <div class="search-box">
+
+        <div class="search-icon">
+            🔍
+        </div>
+
+        <input
+            type="text"
+            id="searchInput"
+            placeholder="Search hospitals, banks, government offices..."
+            onkeydown="handleSearch(event)"
+        >
+
+    </div>
+
+
+    <!-- QUICK ACTIONS -->
+
+    <h2 class="section-title">
+        Quick Actions
+    </h2>
+
+    <section class="quick-grid">
+
+        <div class="action-card" onclick="openExplore()">
+
+            <div class="action-icon">
+                🔎
+            </div>
+
+            <h3>Explore</h3>
+
+            <p>
+                Find hospitals, banks and government offices.
+            </p>
+
+        </div>
+
+
+        <div class="action-card" onclick="openScanner()">
+
+            <div class="action-icon">
+                ▣
+            </div>
+
+            <h3>Scan QR</h3>
+
+            <p>
+                Scan an ORDEXA QR code to quickly join a queue.
+            </p>
+
+        </div>
+
+
+        <div class="action-card" onclick="openQueue()">
+
+            <div class="action-icon">
+                🎟
+            </div>
+
+            <h3>My Queue</h3>
+
+            <p>
+                Check your current queue and token status.
+            </p>
+
+        </div>
+
+    </section>
+
+
+    <!-- CURRENT QUEUE -->
+
+    <h2 class="section-title">
+        Current Queue
+    </h2>
+
+    <section class="queue-card">
+
+        <div class="queue-empty">
+
+            <div class="icon">
+                🎟
+            </div>
+
+            <h3>No Active Queue</h3>
+
+            <p>
+                You are not currently waiting in any queue.
+            </p>
+
+            <button
+                class="primary-btn"
+                onclick="openExplore()">
+                Find a Service
+            </button>
+
+        </div>
+
+    </section>
+
+
+    <!-- FEATURES -->
+
+    <h2 class="section-title">
+        ORDEXA Services
+    </h2>
+
+    <section class="features">
+
+        <div class="feature">
+
+            <div class="feature-icon">
+                ⚡
+            </div>
+
+            <h3>Join Digitally</h3>
+
+            <p>
+                Take your queue token without standing in a physical line.
+            </p>
+
+        </div>
+
+
+        <div class="feature">
+
+            <div class="feature-icon">
+                📊
+            </div>
+
+            <h3>Live Queue</h3>
+
+            <p>
+                Track your token and see the live queue status.
+            </p>
+
+        </div>
+
+
+        <div class="feature">
+
+            <div class="feature-icon">
+                🔔
+            </div>
+
+            <h3>Notifications</h3>
+
+            <p>
+                Stay updated about your queue and service status.
+            </p>
+
+        </div>
+
+    </section>
+
+</main>
+
+
+<!-- BOTTOM NAV -->
+
+<nav class="bottom-nav">
+
+    <div class="nav-inner">
+
+        <div class="nav-item active"
+             onclick="goHome()">
+
+            <div class="nav-icon">⌂</div>
+            Home
+
+        </div>
+
+
+        <div class="nav-item"
+             onclick="openExplore()">
+
+            <div class="nav-icon">🔎</div>
+            Explore
+
+        </div>
+
+
+        <div class="nav-item"
+             onclick="openQueue()">
+
+            <div class="nav-icon">🎟</div>
+            My Queue
+
+        </div>
+
+
+        <div class="nav-item"
+             onclick="openNotifications()">
+
+            <div class="nav-icon">🔔</div>
+            Alerts
+
+        </div>
+
+
+        <div class="nav-item"
+             onclick="openProfile()">
+
+            <div class="nav-icon">👤</div>
+            Profile
+
+        </div>
+
+    </div>
+
+</nav>
+
+
+<script src="../js/home.js" defer></script>
+
+</body>
+</html> 

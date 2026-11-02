@@ -1,0 +1,209 @@
+* {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+            min-height: 100vh;
+            background: linear-gradient(
+                135deg,
+                #071d33,
+                #0b304d
+            );
+            color: white;
+        }
+
+        .page {
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding: 25px;
+        }
+
+        .container {
+            width: 100%;
+            max-width: 1050px;
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 50px;
+            align-items: center;
+        }
+
+        .brand {
+            padding: 20px;
+        }
+
+        .logo {
+            font-size: 48px;
+            font-weight: bold;
+            color: #19d3e6;
+            letter-spacing: 2px;
+            margin-bottom: 20px;
+        }
+
+        .tagline {
+            font-size: 40px;
+            line-height: 1.15;
+            margin-bottom: 20px;
+        }
+
+        .description {
+            color: #b7c9d8;
+            font-size: 17px;
+            line-height: 1.7;
+            max-width: 500px;
+        }
+
+        .features {
+            margin-top: 30px;
+            display: flex;
+            flex-direction: column;
+            gap: 13px;
+        }
+
+        .feature {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            color: #dce8ef;
+        }
+
+        .feature-icon {
+            width: 34px;
+            height: 34px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background: #0c5268;
+            color: #19d3e6;
+            border-radius: 8px;
+        }
+
+        .card {
+            background: white;
+            color: #102a43;
+            border-radius: 20px;
+            padding: 40px;
+            box-shadow: 0 20px 60px rgba(0,0,0,0.25);
+        }
+
+        .card h2 {
+            font-size: 28px;
+            margin-bottom: 10px;
+        }
+
+        .card p {
+            color: #607d8b;
+            margin-bottom: 28px;
+            line-height: 1.5;
+        }
+
+        .btn {
+            width: 100%;
+            border: none;
+            border-radius: 9px;
+            padding: 14px;
+            font-size: 15px;
+            font-weight: bold;
+            cursor: pointer;
+            margin-top: 10px;
+        }
+
+        .primary {
+            background: #08a9c2;
+            color: white;
+        }
+
+        .primary:hover {
+            background: #078da3;
+        }
+
+        .secondary {
+            background: #eaf7fa;
+            color: #087f94;
+        }
+
+        .secondary:hover {
+            background: #d8f0f4;
+        }
+
+        .small-text {
+            text-align: center;
+            margin-top: 22px;
+            font-size: 13px;
+            color: #78909c;
+        }
+
+        @media (max-width: 800px) {
+
+            .container {
+                grid-template-columns: 1fr;
+                gap: 25px;
+            }
+
+            .brand {
+                text-align: center;
+            }
+
+            .description {
+                margin: auto;
+            }
+
+            .features {
+                align-items: flex-start;
+                display: inline-flex;
+            }
+
+            .tagline {
+                font-size: 32px;
+            }
+
+            .logo {
+                font-size: 40px;
+            }
+
+        }
+
+/* ORDEXA Asset & Logo Styling */
+.sidebar-logo-img {
+    width: 28px;
+    height: 28px;
+    object-fit: contain;
+    vertical-align: middle;
+    flex-shrink: 0;
+}
+.sidebar .logo {
+    display: flex !important;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+}
+.app-logo-img {
+    width: 26px;
+    height: 26px;
+    object-fit: contain;
+    vertical-align: middle;
+    flex-shrink: 0;
+}
+.header .logo {
+    display: flex !important;
+    align-items: center;
+    gap: 10px;
+}
+.auth-logo-img, .brand-logo-img {
+    width: 46px;
+    height: 46px;
+    object-fit: contain;
+    display: block;
+    margin: 0 auto 12px;
+}
+.welcome-logo-img {
+    width: 44px;
+    height: 44px;
+    object-fit: contain;
+    vertical-align: middle;
+    margin-right: 10px;
+}

@@ -1,0 +1,687 @@
+/* =====================================================
+           VIEW QUEUE PAGE
+        ===================================================== */
+
+        body {
+            background: #f5f8fc;
+        }
+
+        .view-q-page {
+            min-height: 100vh;
+            padding-bottom: 40px;
+        }
+
+        /* =====================================================
+           HEADER
+        ===================================================== */
+
+        .vq-header {
+            height: 72px;
+            background: #071a33;
+            color: white;
+
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+
+            padding: 0 28px;
+
+            position: sticky;
+            top: 0;
+            z-index: 100;
+        }
+
+        .vq-brand {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+        }
+
+        .vq-logo {
+            width: 40px;
+            height: 40px;
+
+            border-radius: 12px;
+
+            background: #00b8d9;
+
+            display: flex;
+            align-items: center;
+            justify-content: center;
+
+            font-size: 20px;
+            font-weight: 800;
+        }
+
+        .vq-brand-text {
+            font-size: 20px;
+            font-weight: 800;
+            letter-spacing: 0.5px;
+        }
+
+        .vq-back-btn {
+            border: 1px solid rgba(255,255,255,0.2);
+            background: rgba(255,255,255,0.08);
+            color: white;
+
+            padding: 9px 16px;
+
+            border-radius: 10px;
+
+            cursor: pointer;
+            font-size: 14px;
+        }
+
+        .vq-back-btn:hover {
+            background: rgba(255,255,255,0.15);
+        }
+
+        /* =====================================================
+           MAIN CONTAINER
+        ===================================================== */
+
+        .vq-container {
+            width: min(1100px, calc(100% - 32px));
+            margin: 0 auto;
+            padding-top: 28px;
+        }
+
+        /* =====================================================
+           TITLE
+        ===================================================== */
+
+        .vq-title-section {
+            margin-bottom: 24px;
+        }
+
+        .vq-title {
+            font-size: 30px;
+            font-weight: 800;
+            color: #071a33;
+            margin: 0;
+        }
+
+        .vq-subtitle {
+            margin-top: 6px;
+            color: #64748b;
+            font-size: 15px;
+        }
+
+        .vq-live {
+            display: inline-flex;
+            align-items: center;
+            gap: 7px;
+
+            margin-top: 12px;
+
+            font-size: 13px;
+            font-weight: 600;
+            color: #16803c;
+        }
+
+        .vq-live-dot {
+            width: 8px;
+            height: 8px;
+            border-radius: 50%;
+            background: #22c55e;
+        }
+
+        /* =====================================================
+           ORGANIZATION
+        ===================================================== */
+
+        .vq-org-card {
+            background: white;
+            border: 1px solid #e2e8f0;
+            border-radius: 16px;
+
+            padding: 20px;
+
+            margin-bottom: 20px;
+
+            box-shadow: 0 5px 18px rgba(15, 23, 42, 0.05);
+        }
+
+        .vq-org-label {
+            color: #64748b;
+            font-size: 12px;
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: 0.6px;
+        }
+
+        .vq-org-name {
+            margin-top: 5px;
+            font-size: 21px;
+            font-weight: 800;
+            color: #071a33;
+        }
+
+        /* =====================================================
+           SERVICE SELECTOR
+        ===================================================== */
+
+        .vq-selector-card {
+            background: white;
+            border: 1px solid #e2e8f0;
+            border-radius: 16px;
+
+            padding: 20px;
+
+            margin-bottom: 20px;
+
+            box-shadow: 0 5px 18px rgba(15, 23, 42, 0.05);
+        }
+
+        .vq-label {
+            display: block;
+
+            font-size: 13px;
+            font-weight: 700;
+
+            color: #334155;
+
+            margin-bottom: 8px;
+        }
+
+        .vq-select {
+            width: 100%;
+
+            padding: 13px 14px;
+
+            border: 1px solid #cbd5e1;
+            border-radius: 10px;
+
+            background: white;
+
+            font-size: 15px;
+            color: #0f172a;
+
+            outline: none;
+
+            cursor: pointer;
+        }
+
+        .vq-select:focus {
+            border-color: #00a8cc;
+            box-shadow: 0 0 0 3px rgba(0, 184, 217, 0.12);
+        }
+
+        /* =====================================================
+           LOADING
+        ===================================================== */
+
+        .vq-loading {
+            display: none;
+
+            text-align: center;
+
+            padding: 45px 20px;
+
+            color: #64748b;
+        }
+
+        .vq-spinner {
+            width: 30px;
+            height: 30px;
+
+            border: 3px solid #dbeafe;
+            border-top-color: #00a8cc;
+
+            border-radius: 50%;
+
+            animation: vqSpin 0.8s linear infinite;
+
+            margin: 0 auto 12px;
+        }
+
+        @keyframes vqSpin {
+            to {
+                transform: rotate(360deg);
+            }
+        }
+
+        /* =====================================================
+           ERROR
+        ===================================================== */
+
+        .vq-error {
+            display: none;
+
+            background: #fff1f2;
+            border: 1px solid #fecdd3;
+
+            color: #be123c;
+
+            padding: 15px 17px;
+
+            border-radius: 12px;
+
+            margin-bottom: 20px;
+
+            font-size: 14px;
+        }
+
+        /* =====================================================
+           STATS
+        ===================================================== */
+
+        .vq-stats {
+            display: grid;
+
+            grid-template-columns:
+                repeat(4, minmax(0, 1fr));
+
+            gap: 14px;
+
+            margin-bottom: 20px;
+        }
+
+        .vq-stat {
+            background: white;
+
+            border: 1px solid #e2e8f0;
+            border-radius: 16px;
+
+            padding: 20px;
+
+            box-shadow: 0 5px 18px rgba(15, 23, 42, 0.05);
+        }
+
+        .vq-stat-label {
+            font-size: 12px;
+            font-weight: 700;
+
+            color: #64748b;
+
+            text-transform: uppercase;
+            letter-spacing: 0.4px;
+        }
+
+        .vq-stat-value {
+            margin-top: 8px;
+
+            font-size: 27px;
+            font-weight: 850;
+
+            color: #071a33;
+
+            line-height: 1.1;
+        }
+
+        .vq-stat-small {
+            margin-top: 6px;
+
+            font-size: 12px;
+            color: #94a3b8;
+        }
+
+        .vq-token-value {
+            color: #00a8cc;
+            font-size: 24px;
+        }
+
+        /* =====================================================
+           SERVICE HEADER
+        ===================================================== */
+
+        .vq-service-header {
+            background: #071a33;
+            color: white;
+
+            border-radius: 18px;
+
+            padding: 22px 24px;
+
+            margin-bottom: 20px;
+
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+
+            gap: 20px;
+        }
+
+        .vq-service-name {
+            font-size: 22px;
+            font-weight: 800;
+        }
+
+        .vq-service-time {
+            margin-top: 5px;
+
+            color: #a9bfd7;
+
+            font-size: 13px;
+        }
+
+        .vq-service-status {
+            padding: 8px 12px;
+
+            border-radius: 999px;
+
+            background: rgba(34,197,94,0.15);
+            color: #86efac;
+
+            font-size: 12px;
+            font-weight: 700;
+
+            white-space: nowrap;
+        }
+
+        .vq-service-status.closed {
+            background: rgba(239,68,68,0.15);
+            color: #fca5a5;
+        }
+
+        /* =====================================================
+           LINES
+        ===================================================== */
+
+        .vq-section-title {
+            font-size: 19px;
+            font-weight: 800;
+
+            color: #071a33;
+
+            margin-bottom: 12px;
+        }
+
+        .vq-lines {
+            display: grid;
+
+            grid-template-columns:
+                repeat(2, minmax(0, 1fr));
+
+            gap: 14px;
+
+            margin-bottom: 22px;
+        }
+
+        .vq-line {
+            background: white;
+
+            border: 1px solid #e2e8f0;
+
+            border-radius: 16px;
+
+            padding: 18px;
+
+            box-shadow: 0 5px 18px rgba(15, 23, 42, 0.05);
+        }
+
+        .vq-line-top {
+            display: flex;
+
+            justify-content: space-between;
+            align-items: center;
+
+            gap: 12px;
+
+            margin-bottom: 15px;
+        }
+
+        .vq-counter-name {
+            font-size: 16px;
+            font-weight: 800;
+
+            color: #0f172a;
+        }
+
+        .vq-open-badge {
+            padding: 5px 9px;
+
+            border-radius: 999px;
+
+            background: #ecfdf5;
+            color: #15803d;
+
+            font-size: 11px;
+            font-weight: 700;
+        }
+
+        .vq-line-token-label {
+            color: #64748b;
+
+            font-size: 11px;
+            font-weight: 700;
+
+            text-transform: uppercase;
+        }
+
+        .vq-line-token {
+            font-size: 24px;
+            font-weight: 850;
+
+            color: #00a8cc;
+
+            margin-top: 4px;
+        }
+
+        .vq-line-waiting {
+            margin-top: 12px;
+
+            padding-top: 12px;
+
+            border-top: 1px solid #eef2f7;
+
+            display: flex;
+
+            justify-content: space-between;
+
+            font-size: 13px;
+        }
+
+        .vq-line-waiting span:first-child {
+            color: #64748b;
+        }
+
+        .vq-line-waiting span:last-child {
+            font-weight: 800;
+            color: #0f172a;
+        }
+
+        /* =====================================================
+           EMPTY
+        ===================================================== */
+
+        .vq-empty {
+            background: white;
+
+            border: 1px dashed #cbd5e1;
+
+            border-radius: 16px;
+
+            padding: 35px 20px;
+
+            text-align: center;
+
+            color: #64748b;
+
+            margin-bottom: 20px;
+        }
+
+        /* =====================================================
+           JOIN
+        ===================================================== */
+
+        .vq-bottom-card {
+            background: white;
+
+            border: 1px solid #e2e8f0;
+
+            border-radius: 16px;
+
+            padding: 20px;
+
+            display: flex;
+
+            justify-content: space-between;
+
+            align-items: center;
+
+            gap: 20px;
+
+            box-shadow: 0 5px 18px rgba(15, 23, 42, 0.05);
+        }
+
+        .vq-bottom-title {
+            font-size: 16px;
+            font-weight: 800;
+            color: #071a33;
+        }
+
+        .vq-bottom-text {
+            margin-top: 4px;
+            color: #64748b;
+            font-size: 13px;
+        }
+
+        .vq-join-btn {
+            border: none;
+
+            background: #00a8cc;
+            color: white;
+
+            padding: 12px 22px;
+
+            border-radius: 10px;
+
+            font-size: 14px;
+            font-weight: 800;
+
+            cursor: pointer;
+
+            white-space: nowrap;
+        }
+
+        .vq-join-btn:hover {
+            background: #008eae;
+        }
+
+        .vq-join-btn:disabled {
+            background: #cbd5e1;
+            cursor: not-allowed;
+        }
+
+        /* =====================================================
+           LAST UPDATED
+        ===================================================== */
+
+        .vq-updated {
+            text-align: center;
+
+            margin-top: 18px;
+
+            color: #94a3b8;
+
+            font-size: 11px;
+        }
+
+        /* =====================================================
+           RESPONSIVE
+        ===================================================== */
+
+        @media (max-width: 850px) {
+
+            .vq-stats {
+                grid-template-columns:
+                    repeat(2, minmax(0, 1fr));
+            }
+
+            .vq-lines {
+                grid-template-columns: 1fr;
+            }
+        }
+
+        @media (max-width: 600px) {
+
+            .vq-header {
+                padding: 0 15px;
+            }
+
+            .vq-brand-text {
+                font-size: 18px;
+            }
+
+            .vq-container {
+                width: min(100% - 20px, 1100px);
+                padding-top: 20px;
+            }
+
+            .vq-title {
+                font-size: 25px;
+            }
+
+            .vq-stats {
+                grid-template-columns: 1fr 1fr;
+                gap: 10px;
+            }
+
+            .vq-stat {
+                padding: 15px;
+            }
+
+            .vq-stat-value {
+                font-size: 23px;
+            }
+
+            .vq-service-header {
+                flex-direction: column;
+                align-items: flex-start;
+            }
+
+            .vq-bottom-card {
+                flex-direction: column;
+                align-items: stretch;
+            }
+
+            .vq-join-btn {
+                width: 100%;
+            }
+
+            .vq-back-btn {
+                padding: 8px 11px;
+            }
+        }
+
+/* ORDEXA Asset & Logo Styling */
+.sidebar-logo-img {
+    width: 28px;
+    height: 28px;
+    object-fit: contain;
+    vertical-align: middle;
+    flex-shrink: 0;
+}
+.sidebar .logo {
+    display: flex !important;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+}
+.app-logo-img {
+    width: 26px;
+    height: 26px;
+    object-fit: contain;
+    vertical-align: middle;
+    flex-shrink: 0;
+}
+.header .logo {
+    display: flex !important;
+    align-items: center;
+    gap: 10px;
+}
+.auth-logo-img, .brand-logo-img {
+    width: 46px;
+    height: 46px;
+    object-fit: contain;
+    display: block;
+    margin: 0 auto 12px;
+}
+.welcome-logo-img {
+    width: 44px;
+    height: 44px;
+    object-fit: contain;
+    vertical-align: middle;
+    margin-right: 10px;
+}

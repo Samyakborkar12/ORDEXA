@@ -1,0 +1,426 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0">
+
+    <title>Join Queue | ORDEXA</title>
+
+
+    <link
+        rel="stylesheet"
+        href="../css/variables.css">
+
+    <link
+        rel="stylesheet"
+        href="../css/global.css">
+
+    <link
+        rel="stylesheet"
+        href="../css/components.css">
+
+    <link
+        rel="stylesheet"
+        href="../css/queue.css">
+
+    <link
+        rel="stylesheet"
+        href="../css/responsive.css">
+
+
+    <link rel="stylesheet" href="../css/join-queue.css">
+
+    <link rel="icon" type="image/svg+xml" href="../assets/logo/ordexa-favicon.svg">
+</head>
+
+
+<body>
+
+
+<!-- =====================================================
+     HEADER
+===================================================== -->
+
+<header class="main-header">
+
+    <a
+        href="../index.html"
+        class="logo">
+
+        <span class="logo-icon"><img src="../assets/logo/ordexa-logo.svg" alt="ORDEXA" class="app-logo-img"></span>
+
+        <span>
+            ORDEXA
+        </span>
+
+    </a>
+
+
+    <a
+        href="service.html"
+        class="aero-button"
+        id="back-button">
+
+        ← Back
+
+    </a>
+
+</header>
+
+
+
+<!-- =====================================================
+     MAIN
+===================================================== -->
+
+<main class="queue-page">
+
+
+    <!-- HEADING -->
+
+    <section class="queue-heading">
+
+        <span class="section-label">
+            QUEUE MANAGEMENT
+        </span>
+
+        <h1>
+            Join the Queue
+        </h1>
+
+        <p>
+            Confirm your service details and get your queue token.
+        </p>
+
+    </section>
+
+
+
+    <!-- =================================================
+         QUEUE CARD
+    ================================================= -->
+
+    <section class="join-queue-card">
+
+
+        <!-- ORGANIZATION -->
+
+        <div class="join-queue-header">
+
+            <div class="join-queue-icon">
+                ⌂
+            </div>
+
+
+            <div>
+
+                <span class="details-label">
+                    SELECTED ORGANIZATION
+                </span>
+
+
+                <h2 id="organization-name">
+                    Loading...
+                </h2>
+
+
+                <p id="service-name">
+                    Loading service...
+                </p>
+
+
+                <div class="service-time-info">
+
+                    Average service time:
+
+                    <strong id="service-time">
+                        --
+                    </strong>
+
+                </div>
+
+            </div>
+
+        </div>
+
+
+
+        <!-- =================================================
+             QUEUE INFORMATION
+        ================================================= -->
+
+        <div class="queue-status-grid">
+
+
+            <article class="status-card">
+
+                <div class="status-icon">
+                    👥
+                </div>
+
+                <p>
+                    People Waiting
+                </p>
+
+                <h2 id="waiting-count">
+                    --
+                </h2>
+
+            </article>
+
+
+
+            <article class="status-card">
+
+                <div class="status-icon">
+                    ◷
+                </div>
+
+                <p>
+                    Estimated Wait
+                </p>
+
+                <h2 id="waiting-time">
+                    --
+                </h2>
+
+            </article>
+
+
+        </div>
+
+
+
+        <!-- NOTICE -->
+
+        <div class="queue-notice">
+
+            <span class="notice-icon">
+                ⓘ
+            </span>
+
+
+            <p>
+                Please verify your organization and service before joining the queue.
+            </p>
+
+        </div>
+
+
+
+        <!-- JOIN BUTTON -->
+
+        <button
+            type="button"
+            class="aero-button join-queue-button"
+            id="join-queue-button">
+
+            Join Queue →
+
+        </button>
+
+
+
+        <!-- MESSAGE -->
+
+        <div
+            id="message-box"
+            class="message-box">
+        </div>
+
+
+
+        <!-- =================================================
+             TOKEN RESULT
+        ================================================= -->
+
+        <div
+            class="token-result"
+            id="token-result"
+            hidden>
+
+
+            <div class="success-icon">
+                ✓
+            </div>
+
+
+            <span class="token-label">
+                YOUR QUEUE TOKEN
+            </span>
+
+
+            <h2 id="token-number">
+                --
+            </h2>
+
+
+            <div class="token-divider">
+            </div>
+
+
+            <p>
+                People ahead of you
+            </p>
+
+
+            <strong id="people-ahead">
+                0
+            </strong>
+
+
+            <p class="token-wait">
+
+                Estimated wait:
+
+                <span id="your-wait">
+                    -- min
+                </span>
+
+            </p>
+
+
+            <p class="demo-notice">
+                Your real queue token has been generated successfully.
+            </p>
+
+
+            <a
+                href="live-queue.html"
+                class="aero-button live-queue-button"
+                id="track-queue-button">
+
+                View Queue Status →
+
+            </a>
+
+
+        </div>
+
+
+    </section>
+
+
+
+    <!-- =================================================
+         INFORMATION
+    ================================================= -->
+
+    <section class="queue-info">
+
+
+        <h2>
+            What happens next?
+        </h2>
+
+
+
+        <div class="queue-steps">
+
+
+            <div class="queue-step">
+
+                <span>
+                    01
+                </span>
+
+
+                <div>
+
+                    <h3>
+                        Join the Queue
+                    </h3>
+
+                    <p>
+                        Confirm your selected service.
+                    </p>
+
+                </div>
+
+            </div>
+
+
+
+            <div class="queue-step">
+
+                <span>
+                    02
+                </span>
+
+
+                <div>
+
+                    <h3>
+                        Get Your Token
+                    </h3>
+
+                    <p>
+                        Receive your real queue token.
+                    </p>
+
+                </div>
+
+            </div>
+
+
+
+            <div class="queue-step">
+
+                <span>
+                    03
+                </span>
+
+
+                <div>
+
+                    <h3>
+                        Track Your Turn
+                    </h3>
+
+                    <p>
+                        Continue to the queue status page.
+                    </p>
+
+                </div>
+
+            </div>
+
+
+        </div>
+
+    </section>
+
+</main>
+
+
+
+<!-- =====================================================
+     FOOTER
+===================================================== -->
+
+<footer class="main-footer">
+
+    <p>
+        © 2026 ORDEXA. All rights reserved.
+    </p>
+
+
+    <p>
+        Smart Queue Management
+    </p>
+
+</footer>
+
+
+
+<script src="../js/join-queue.js" defer></script>
+
+
+</body>
+
+</html>

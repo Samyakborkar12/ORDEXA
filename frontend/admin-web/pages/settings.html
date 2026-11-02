@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Organization & Queue Settings - ORDEXA</title>
+    <link rel="stylesheet" href="../css/settings.css">
+    <link rel="icon" type="image/svg+xml" href="../assets/logo/ordexa-favicon.svg">
+</head>
+<body>
+
+<!-- SIDEBAR -->
+<aside class="sidebar">
+    <div class="logo">
+        <img src="../assets/logo/ordexa-logo.svg" alt="ORDEXA" class="sidebar-logo-img">
+        ORD<span>EXA</span>
+    </div>
+    <nav class="nav">
+        <a href="dashboard.html">Dashboard</a>
+        <a href="counters.html">Counters</a>
+        <a href="live-queue.html">Live Queue</a>
+        <a href="walk-ins.html">Walk-ins</a>
+        <a href="services.html">Services</a>
+        <a href="staff.html">Staff</a>
+        <a href="customers.html">Customers</a>
+        <a href="qr-codes.html">QR Codes</a>
+        <a href="analytics.html">Analytics</a>
+        <a href="feedback.html">Feedback</a>
+        <a href="notifications.html">Notifications</a>
+        <a href="organization.html">Organization</a>
+        <a href="settings.html" class="active">Settings</a>
+    </nav>
+    <button class="logout" onclick="logout()">Logout</button>
+</aside>
+
+<!-- MAIN -->
+<main class="main">
+    <div class="topbar">
+        <div>
+            <h1>Organization & System Settings</h1>
+            <p>Customize operating schedule, token prefix rules, and notifications</p>
+        </div>
+        <button class="btn-save" onclick="saveSettings()">💾 Save Changes</button>
+    </div>
+
+    <div class="settings-grid">
+        <!-- Left Side Settings -->
+        <div>
+            <!-- Org Profile -->
+            <div class="card">
+                <h2>Organization Profile</h2>
+                <p class="card-desc">Information displayed to customers on tokens and mobile tracking</p>
+
+                <div class="form-group">
+                    <label>Organization Name</label>
+                    <input type="text" class="form-control" id="orgName" placeholder="e.g. City Central Hospital">
+                </div>
+
+                <div class="form-row">
+                    <div class="form-group">
+                        <label>Category / Type</label>
+                        <select class="form-control" id="orgType">
+                            <option value="HOSPITAL">Hospital / Healthcare</option>
+                            <option value="BANK">Bank / Financial Institution</option>
+                            <option value="CLINIC">Diagnostic Clinic</option>
+                            <option value="GOVERNMENT">Government Office</option>
+                            <option value="RETAIL">Retail / Customer Service</option>
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <label>Contact Email</label>
+                        <input type="email" class="form-control" id="orgEmail" placeholder="support@ordexa.com">
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <label>Description & Customer Directions</label>
+                    <textarea class="form-control" id="orgDesc" rows="3" placeholder="Explain counter locations or instructions for walk-in patients"></textarea>
+                </div>
+            </div>
+
+            <!-- Operational Hours -->
+            <div class="card">
+                <h2>Operating Hours & Pacing</h2>
+                <p class="card-desc">Set business timings and average buffer per service</p>
+
+                <div class="form-row">
+                    <div class="form-group">
+                        <label>Queue Opening Time</label>
+                        <input type="time" class="form-control" id="openTime" value="09:00">
+                    </div>
+                    <div class="form-group">
+                        <label>Queue Closing Time</label>
+                        <input type="time" class="form-control" id="closeTime" value="18:00">
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <label>Pacing Buffer (Minutes added between calls)</label>
+                    <input type="number" class="form-control" id="bufferMinutes" value="2" min="0" max="15">
+                </div>
+            </div>
+        </div>
+
+        <!-- Right Side Settings -->
+        <div>
+            <!-- Audio & Alert Toggles -->
+            <div class="card">
+                <h2>Sound & Alerts</h2>
+                <p class="card-desc">Auditory cues for counters and waiting lounge</p>
+
+                <div class="toggle-item">
+                    <div>
+                        <div class="toggle-title">Play Token Chime</div>
+                        <div class="toggle-desc">Sound chime when 'Next Token' is called</div>
+                    </div>
+                    <input type="checkbox" id="soundChime" checked style="width: 20px; height: 20px;">
+                </div>
+
+                <div class="toggle-item">
+                    <div>
+                        <div class="toggle-title">Auto-Skip No-Shows</div>
+                        <div class="toggle-desc">Mark skipped if customer does not arrive in 5m</div>
+                    </div>
+                    <input type="checkbox" id="autoSkip" style="width: 20px; height: 20px;">
+                </div>
+
+                <div class="toggle-item">
+                    <div>
+                        <div class="toggle-title">SMS Notifications</div>
+                        <div class="toggle-desc">Send SMS alert when 2 people are ahead</div>
+                    </div>
+                    <input type="checkbox" id="smsAlerts" checked style="width: 20px; height: 20px;">
+                </div>
+            </div>
+
+            <!-- Danger Zone -->
+            <div class="card danger-card">
+                <h2 style="color: #c53030;">Danger Zone</h2>
+                <p class="card-desc">Irreversible operational actions</p>
+
+                <p style="font-size: 13px; color: #742a2a; margin-bottom: 15px;">
+                    Clearing daily queue will reset all active tokens to archived status for the next day.
+                </p>
+
+                <button class="btn-danger" onclick="confirmResetQueue()">⚠️ Reset Today's Queue</button>
+            </div>
+        </div>
+    </div>
+</main>
+
+<div class="toast" id="toast">
+    <span>✅</span>
+    <span id="toastMsg">Settings saved successfully!</span>
+</div>
+
+<script src="../js/settings.js" defer></script>
+</body>
+</html>

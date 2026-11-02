@@ -1,0 +1,325 @@
+* {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+            font-family: Arial, Helvetica, sans-serif;
+        }
+
+        body {
+            background: #f4f8fb;
+            color: #102a43;
+        }
+
+        /* ================= SIDEBAR ================= */
+
+        .sidebar {
+            position: fixed;
+            left: 0;
+            top: 0;
+            width: 245px;
+            height: 100vh;
+            background: #06283d;
+            color: white;
+            padding: 24px 15px;
+            z-index: 100;
+        }
+
+        .logo {
+            font-size: 25px;
+            font-weight: 800;
+            text-align: center;
+            margin-bottom: 35px;
+        }
+
+        .logo span {
+            color: #00d9ff;
+        }
+
+        .nav {
+            display: flex;
+            flex-direction: column;
+            gap: 7px;
+        }
+
+        .nav a {
+            text-decoration: none;
+            color: #c6d8e2;
+            padding: 12px 14px;
+            border-radius: 8px;
+            font-size: 14px;
+            font-weight: 600;
+            transition: 0.2s;
+        }
+
+        .nav a:hover,
+        .nav a.active {
+            background: #0b405d;
+            color: #00d9ff;
+        }
+
+        .logout {
+            position: absolute;
+            left: 15px;
+            right: 15px;
+            bottom: 22px;
+            background: #0b405d;
+            color: #ffb4b4;
+            border: none;
+            padding: 12px;
+            border-radius: 8px;
+            cursor: pointer;
+            font-weight: 700;
+        }
+
+        /* ================= MAIN ================= */
+
+        .main {
+            margin-left: 245px;
+            min-height: 100vh;
+            padding: 30px;
+        }
+
+        /* ================= HEADER ================= */
+
+        .header {
+            background: white;
+            border-radius: 15px;
+            padding: 22px 25px;
+            box-shadow: 0 4px 18px rgba(0,0,0,0.05);
+            margin-bottom: 22px;
+        }
+
+        .header h1 {
+            color: #06283d;
+            font-size: 25px;
+        }
+
+        .header p {
+            color: #718096;
+            margin-top: 6px;
+            font-size: 13px;
+        }
+
+        /* ================= DAY SELECTOR ================= */
+
+        .day-bar {
+            background: white;
+            border-radius: 15px;
+            padding: 15px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 18px;
+            box-shadow: 0 4px 18px rgba(0,0,0,0.05);
+            margin-bottom: 22px;
+        }
+
+        .day-button {
+            border: 1px solid #d5e2e8;
+            background: white;
+            color: #06283d;
+            padding: 10px 17px;
+            border-radius: 8px;
+            cursor: pointer;
+            font-weight: 700;
+        }
+
+        .day-button:hover {
+            border-color: #00b8d9;
+            color: #008eaa;
+        }
+
+        .date-display {
+            min-width: 180px;
+            text-align: center;
+            font-weight: 800;
+            color: #06283d;
+        }
+
+        /* ================= CUSTOMER CARD ================= */
+
+        .customers-card {
+            background: white;
+            border-radius: 15px;
+            overflow: hidden;
+            box-shadow: 0 4px 18px rgba(0,0,0,0.05);
+        }
+
+        .table-header,
+        .customer-row {
+            display: grid;
+            grid-template-columns: 1.3fr 1.3fr 0.7fr;
+            align-items: center;
+        }
+
+        .table-header {
+            background: #06283d;
+            color: white;
+            padding: 16px 22px;
+            font-size: 13px;
+            font-weight: 800;
+        }
+
+        .customer-row {
+            padding: 17px 22px;
+            border-bottom: 1px solid #edf2f5;
+            font-size: 14px;
+        }
+
+        .customer-row:last-child {
+            border-bottom: none;
+        }
+
+        .customer-row:hover {
+            background: #f8fcfd;
+        }
+
+        .customer-name {
+            font-weight: 700;
+            color: #06283d;
+        }
+
+        .service-name {
+            color: #3d6475;
+        }
+
+        .joined-time {
+            color: #008eaa;
+            font-weight: 700;
+        }
+
+        /* ================= EMPTY ================= */
+
+        .empty {
+            padding: 65px 20px;
+            text-align: center;
+            color: #718096;
+        }
+
+        .empty-icon {
+            font-size: 40px;
+            margin-bottom: 12px;
+        }
+
+        .empty h3 {
+            color: #425466;
+            margin-bottom: 6px;
+        }
+
+        .empty p {
+            font-size: 13px;
+        }
+
+        /* ================= LOADING ================= */
+
+        .loading {
+            padding: 60px;
+            text-align: center;
+            color: #718096;
+        }
+
+        /* ================= MOBILE ================= */
+
+        @media (max-width: 700px) {
+
+            .sidebar {
+                position: relative;
+                width: 100%;
+                height: auto;
+                padding: 15px;
+            }
+
+            .logo {
+                margin-bottom: 15px;
+            }
+
+            .nav {
+                flex-direction: row;
+                overflow-x: auto;
+            }
+
+            .nav a {
+                white-space: nowrap;
+            }
+
+            .logout {
+                position: static;
+                margin-top: 12px;
+                width: 100%;
+            }
+
+            .main {
+                margin-left: 0;
+                padding: 15px;
+            }
+
+            .day-bar {
+                gap: 8px;
+            }
+
+            .day-button {
+                padding: 9px 11px;
+            }
+
+            .date-display {
+                min-width: 120px;
+                font-size: 13px;
+            }
+
+            .table-header,
+            .customer-row {
+                grid-template-columns: 1fr 1fr 0.7fr;
+                padding-left: 12px;
+                padding-right: 12px;
+            }
+
+            .table-header {
+                font-size: 11px;
+            }
+
+            .customer-row {
+                font-size: 12px;
+            }
+
+        }
+
+/* ORDEXA Asset & Logo Styling */
+.sidebar-logo-img {
+    width: 28px;
+    height: 28px;
+    object-fit: contain;
+    vertical-align: middle;
+    flex-shrink: 0;
+}
+.sidebar .logo {
+    display: flex !important;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+}
+.app-logo-img {
+    width: 26px;
+    height: 26px;
+    object-fit: contain;
+    vertical-align: middle;
+    flex-shrink: 0;
+}
+.header .logo {
+    display: flex !important;
+    align-items: center;
+    gap: 10px;
+}
+.auth-logo-img, .brand-logo-img {
+    width: 46px;
+    height: 46px;
+    object-fit: contain;
+    display: block;
+    margin: 0 auto 12px;
+}
+.welcome-logo-img {
+    width: 44px;
+    height: 44px;
+    object-fit: contain;
+    vertical-align: middle;
+    margin-right: 10px;
+}

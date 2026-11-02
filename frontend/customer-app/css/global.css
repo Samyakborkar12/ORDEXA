@@ -1,0 +1,211 @@
+/* =========================
+   RESET
+========================= */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    min-height: 100vh;
+    background: var(--bg-primary);
+    color: var(--text-primary);
+    font-family: var(--font-primary);
+    line-height: 1.6;
+
+    display: flex;
+    flex-direction: column;
+}
+
+a {
+    color: inherit;
+    text-decoration: none;
+}
+
+button,
+input,
+select,
+textarea {
+    font: inherit;
+}
+
+button {
+    cursor: pointer;
+}
+
+button,
+a {
+    -webkit-tap-highlight-color: transparent;
+}
+
+p {
+    color: var(--text-secondary);
+}
+
+h1,
+h2,
+h3 {
+    color: var(--text-primary);
+    line-height: 1.3;
+}
+
+/* =========================
+   COMMON BUTTON
+========================= */
+
+.aero-button {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+
+    padding: 10px 20px;
+
+    background: var(--accent-dark);
+    color: #ffffff;
+
+    border: 1px solid rgba(255, 255, 255, 0.08);
+    border-radius: var(--radius-sm);
+
+    font-family: var(--font-primary);
+    font-size: 14px;
+    font-weight: 600;
+    line-height: 1.5;
+
+    text-align: center;
+    text-decoration: none;
+    white-space: nowrap;
+
+    cursor: pointer;
+
+    transition:
+        background var(--transition),
+        color var(--transition),
+        border-color var(--transition),
+        transform var(--transition),
+        box-shadow var(--transition);
+}
+
+/* Hover */
+
+.aero-button:hover {
+    background: var(--accent-hover);
+    color: #ffffff;
+
+    transform: translateY(-2px);
+
+    box-shadow: 0 6px 18px rgba(2, 132, 199, 0.25);
+}
+
+/* Click */
+
+.aero-button:active {
+    transform: translateY(0);
+    box-shadow: none;
+}
+
+/* Keyboard Focus */
+
+.aero-button:focus-visible {
+    outline: 2px solid var(--accent);
+    outline-offset: 4px;
+}
+
+/* =========================
+   SECTION WINDOW
+========================= */
+
+.aero-window {
+    width: 100%;
+    overflow: hidden;
+
+    background: var(--bg-secondary);
+
+    border: 1px solid var(--border-color);
+    border-radius: var(--radius-lg);
+
+    box-shadow: var(--shadow-card);
+}
+
+/* Window Title */
+
+.aero-titlebar {
+    padding: 15px 22px;
+
+    background: #202d4b;
+
+    border-bottom: 1px solid var(--border-color);
+
+    color: var(--text-primary);
+    font-size: 15px;
+    font-weight: 600;
+}
+
+/* Window Content */
+
+.window-content {
+    padding: 28px;
+}
+
+/* =========================
+   FOCUS ACCESSIBILITY
+========================= */
+
+a:focus-visible,
+button:focus-visible {
+    outline: 2px solid var(--accent);
+    outline-offset: 4px;
+}
+
+/* =========================
+   REDUCED MOTION
+========================= */
+
+@media (prefers-reduced-motion: reduce) {
+    *,
+    *::before,
+    *::after {
+        scroll-behavior: auto !important;
+        transition-duration: 0.01ms !important;
+        animation-duration: 0.01ms !important;
+    }
+}
+
+
+/* =========================================================
+   ORDEXA Brand Identity & Logo Helpers
+   ========================================================= */
+
+.logo {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    text-decoration: none;
+    font-weight: 750;
+    letter-spacing: 1px;
+}
+
+.app-logo-img,
+.sidebar-logo-img {
+    width: 28px;
+    height: 28px;
+    object-fit: contain;
+    flex-shrink: 0;
+    vertical-align: middle;
+}
+
+.auth-logo-img,
+.welcome-logo-img {
+    width: 44px;
+    height: 44px;
+    object-fit: contain;
+    flex-shrink: 0;
+    display: inline-block;
+    vertical-align: middle;
+}

@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Settings - ORDEXA</title>
+    <link rel="stylesheet" href="../css/settings.css">
+    <link rel="icon" type="image/svg+xml" href="../assets/logo/ordexa-favicon.svg">
+</head>
+<body>
+
+<header class="header">
+    <a href="home.html" class="logo"><img src="../assets/logo/ordexa-logo.svg" alt="ORDEXA" class="app-logo-img"> <span>ORDEXA</span></a>
+    <div class="header-title">App Preferences</div>
+    <div style="width: 40px;"></div>
+</header>
+
+<main class="main">
+    <div class="settings-card">
+        <div class="section-title">General</div>
+
+        <div class="setting-row">
+            <div>
+                <div class="setting-title">Language / भाषा</div>
+                <div class="setting-desc">App language interface</div>
+            </div>
+            <select class="select-input" id="langSelect" onchange="savePreferences()">
+                <option value="en">English</option>
+                <option value="hi">हिंदी (Hindi)</option>
+            </select>
+        </div>
+
+        <div class="setting-row">
+            <div>
+                <div class="setting-title">Queue Alert Sound</div>
+                <div class="setting-desc">Vibrate and play chime when your turn is next</div>
+            </div>
+            <input type="checkbox" class="toggle-switch" id="soundToggle" checked onchange="savePreferences()">
+        </div>
+
+        <div class="setting-row">
+            <div>
+                <div class="setting-title">Auto-Refresh Interval</div>
+                <div class="setting-desc">Live waiting list countdown polling</div>
+            </div>
+            <select class="select-input" id="refreshSelect" onchange="savePreferences()">
+                <option value="5">Every 5 seconds</option>
+                <option value="10">Every 10 seconds</option>
+                <option value="30">Every 30 seconds</option>
+            </select>
+        </div>
+    </div>
+
+    <div class="settings-card">
+        <div class="section-title">Privacy & Storage</div>
+        <p style="font-size: 13px; color: #8faabd; line-height: 1.5; margin-bottom: 15px;">
+            ORDEXA stores your temporary token state and organization favorites on this browser.
+        </p>
+        <button class="btn-clear" onclick="clearAppData()">Clear Local Cache & Session</button>
+    </div>
+
+    <div style="text-align: center; color: #627d98; font-size: 12px; margin-top: 20px;">
+        ORDEXA Mobile App v2.4 · Built for seamless queue management
+    </div>
+</main>
+
+<!-- BOTTOM NAV -->
+<nav class="bottom-nav">
+    <div class="nav-inner">
+        <div class="nav-item" onclick="location.href='home.html'"><div class="nav-icon">⌂</div>Home</div>
+        <div class="nav-item" onclick="location.href='explore.html'"><div class="nav-icon">🔎</div>Explore</div>
+        <div class="nav-item" onclick="location.href='view-queue.html'"><div class="nav-icon">🎟</div>My Queue</div>
+        <div class="nav-item" onclick="location.href='notifications.html'"><div class="nav-icon">🔔</div>Alerts</div>
+        <div class="nav-item" onclick="location.href='profile.html'"><div class="nav-icon">👤</div>Profile</div>
+    </div>
+</nav>
+
+<script src="../js/settings.js" defer></script>
+</body>
+</html>

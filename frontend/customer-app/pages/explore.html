@@ -1,0 +1,319 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1.0">
+
+    <title>ORDEXA - Explore</title>
+
+    <link rel="stylesheet" href="../css/explore.css">
+
+    <link rel="icon" type="image/svg+xml" href="../assets/logo/ordexa-favicon.svg">
+</head>
+
+
+<body>
+
+
+<!-- ================= HEADER ================= -->
+
+<header class="header">
+
+    <div class="logo" onclick="goHome()">
+        <img src="../assets/logo/ordexa-logo.svg" alt="ORDEXA" class="app-logo-img">
+        <span>ORDEXA</span>
+    </div>
+
+
+    <div class="header-right">
+
+        <div
+            class="icon-btn"
+            onclick="openNotifications()"
+            title="Notifications">
+
+            🔔
+
+        </div>
+
+
+        <div
+            class="icon-btn"
+            onclick="openProfile()"
+            title="Profile">
+
+            👤
+
+        </div>
+
+    </div>
+
+</header>
+
+
+
+<!-- ================= MAIN ================= -->
+
+<main class="main">
+
+
+    <div class="heading">
+
+        <h1>
+            Explore
+        </h1>
+
+        <p>
+            Find an organization and join its queue digitally.
+        </p>
+
+    </div>
+
+
+
+    <!-- ================= SEARCH ================= -->
+
+    <div class="search-box">
+
+        <div class="search-icon">
+            🔍
+        </div>
+
+        <input
+            type="text"
+            id="searchInput"
+            placeholder="Search organization..."
+            oninput="filterOrganizations()">
+
+    </div>
+
+
+
+    <!-- ================= FILTERS ================= -->
+
+    <div class="filters">
+
+
+        <button
+            class="filter active"
+            data-type="ALL"
+            onclick="setFilter('ALL', this)">
+
+            All
+
+        </button>
+
+
+        <button
+            class="filter"
+            data-type="HOSPITAL"
+            onclick="setFilter('HOSPITAL', this)">
+
+            🏥 Hospital
+
+        </button>
+
+
+        <button
+            class="filter"
+            data-type="BANK"
+            onclick="setFilter('BANK', this)">
+
+            🏦 Bank
+
+        </button>
+
+
+        <button
+            class="filter"
+            data-type="GOVERNMENT"
+            onclick="setFilter('GOVERNMENT', this)">
+
+            🏛 Government Office
+
+        </button>
+
+
+    </div>
+
+
+
+    <!-- ================= SECTION HEADER ================= -->
+
+    <div class="section-header">
+
+        <h2>
+            Organizations
+        </h2>
+
+        <span
+            class="count"
+            id="count">
+
+            Loading...
+
+        </span>
+
+    </div>
+
+
+
+    <!-- ================= LOADING ================= -->
+
+    <div
+        id="loading"
+        class="loading">
+
+        Loading organizations...
+
+    </div>
+
+
+
+    <!-- ================= ERROR ================= -->
+
+    <div
+        id="error"
+        class="error">
+
+        <div>
+            Unable to load organizations.
+        </div>
+
+
+        <button
+            class="retry-btn"
+            onclick="loadOrganizations()">
+
+            Retry
+
+        </button>
+
+    </div>
+
+
+
+    <!-- ================= ORGANIZATIONS ================= -->
+
+    <div
+        id="organizations"
+        class="organizations">
+    </div>
+
+
+
+    <!-- ================= EMPTY ================= -->
+
+    <div
+        id="empty"
+        class="empty">
+
+        <div class="empty-icon">
+            🔍
+        </div>
+
+        <h3>
+            No organizations found
+        </h3>
+
+        <p>
+            Try another search or organization type.
+        </p>
+
+    </div>
+
+
+</main>
+
+
+
+<!-- ================= BOTTOM NAV ================= -->
+
+<nav class="bottom-nav">
+
+    <div class="nav-inner">
+
+
+        <div
+            class="nav-item"
+            onclick="goHome()">
+
+            <div class="nav-icon">
+                ⌂
+            </div>
+
+            Home
+
+        </div>
+
+
+
+        <div class="nav-item active">
+
+            <div class="nav-icon">
+                🔎
+            </div>
+
+            Explore
+
+        </div>
+
+
+
+        <div
+            class="nav-item"
+            onclick="openQueue()">
+
+            <div class="nav-icon">
+                🎟
+            </div>
+
+            My Queue
+
+        </div>
+
+
+
+        <div
+            class="nav-item"
+            onclick="openNotifications()">
+
+            <div class="nav-icon">
+                🔔
+            </div>
+
+            Alerts
+
+        </div>
+
+
+
+        <div
+            class="nav-item"
+            onclick="openProfile()">
+
+            <div class="nav-icon">
+                👤
+            </div>
+
+            Profile
+
+        </div>
+
+
+    </div>
+
+</nav>
+
+
+
+<script src="../js/explore.js" defer></script>
+
+
+</body>
+
+</html>

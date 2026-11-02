@@ -1,0 +1,47 @@
+/* =========================================================
+   ORDEXA Admin Portal - Theme Variables
+   frontend/admin-web/css/variables.css
+   ========================================================= */
+
+:root {
+    /* Brand Accent Colors */
+    --cyan: #00d9ff;
+    --cyan-hover: #52e6ff;
+    --cyan-glow: rgba(0, 217, 255, 0.18);
+    --primary: #00b8d9;
+    --primary-hover: #0098b3;
+
+    /* Backgrounds */
+    --bg-dark: #071525;
+    --sidebar-bg: #06283d;
+    --sidebar-active: #0b405d;
+    --bg-light: #f4f8fb;
+    --card-bg: #ffffff;
+    --card-dark: #102235;
+
+    /* Text */
+    --text-dark: #06283d;
+    --text-muted: #718096;
+    --text-light: #ffffff;
+    --text-nav: #c6d8e2;
+
+    /* Status Colors */
+    --success: #10b981;
+    --danger: #ef4444;
+    --warning: #f59e0b;
+    --info: #3b82f6;
+
+    /* Borders & Shadows */
+    --border-light: #e4edf2;
+    --border-dark: rgba(255, 255, 255, 0.08);
+    --shadow-sm: 0 2px 8px rgba(0, 0, 0, 0.05);
+    --shadow-md: 0 4px 18px rgba(0, 0, 0, 0.06);
+    --shadow-lg: 0 10px 30px rgba(0, 0, 0, 0.1);
+
+    /* Radii */
+    --radius-sm: 8px;
+    --radius-md: 12px;
+    --radius-lg: 16px;
+    --radius-xl: 20px;
+}
+

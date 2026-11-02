@@ -1,0 +1,420 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0">
+
+    <title>Live Queue - ORDEXA</title>
+
+    <link rel="stylesheet" href="../css/counter-queue.css">
+
+    <link rel="icon" type="image/svg+xml" href="../assets/logo/ordexa-favicon.svg">
+</head>
+
+
+<body>
+
+
+<!-- ================= SIDEBAR ================= -->
+
+<aside class="sidebar">
+
+    <div class="logo">
+        <img src="../assets/logo/ordexa-logo.svg" alt="ORDEXA" class="sidebar-logo-img">
+        ORD<span>EXA</span>
+    </div>
+
+    <nav class="nav">
+
+        <a href="dashboard.html">
+            Dashboard
+        </a>
+
+        <a href="counters.html">
+            Counters
+        </a>
+
+        <a href="counter-queue.html" class="active">
+            Live Queue
+        </a>
+
+        <a href="walk-ins.html">
+            Walk-ins
+        </a>
+
+        <a href="services.html">
+            Services
+        </a>
+
+        <a href="staff.html">
+            Staff
+        </a>
+
+        <a href="customers.html">
+            Customers
+        </a>
+
+        <a href="qr-codes.html">
+            QR Codes
+        </a>
+
+        <a href="analytics.html">
+            Analytics
+        </a>
+
+        <a href="feedback.html">
+            Feedback
+        </a>
+
+        <a href="notifications.html">
+            Notifications
+        </a>
+
+        <a href="organization.html">
+            Organization
+        </a>
+
+        <a href="settings.html">
+            Settings
+        </a>
+
+    </nav>
+
+    <button class="logout" onclick="logout()">
+        Logout
+    </button>
+
+</aside>
+
+
+<!-- ================= MAIN ================= -->
+
+<main class="main">
+
+
+    <!-- TOPBAR -->
+
+    <div class="topbar">
+
+        <div>
+
+            <button
+                class="back-btn"
+                onclick="goBack()">
+
+                ← Back to Counters
+
+            </button>
+
+            <h1>
+                Live Queue
+            </h1>
+
+            <p>
+                Manage tokens and serve customers in real time.
+            </p>
+
+        </div>
+
+
+        <div class="admin">
+
+            <div
+                class="admin-circle"
+                id="adminInitial">
+                A
+            </div>
+
+            <div
+                class="admin-name"
+                id="adminName">
+                Admin
+            </div>
+
+        </div>
+
+    </div>
+
+
+    <!-- COUNTER INFO -->
+
+    <div class="counter-header">
+
+        <div class="counter-title">
+
+            <div class="counter-icon">
+                🎛️
+            </div>
+
+            <div>
+
+                <h2 id="counterName">
+                    Loading Counter...
+                </h2>
+
+                <p id="staffName">
+                    Loading staff...
+                </p>
+
+            </div>
+
+        </div>
+
+
+        <div>
+
+            <span
+                id="counterStatus"
+                class="status open">
+
+                OPEN
+
+            </span>
+
+        </div>
+
+    </div>
+
+
+    <!-- CURRENT TOKEN -->
+
+    <section class="current-box">
+
+        <div>
+
+            <div class="current-label">
+                CURRENTLY SERVING
+            </div>
+
+            <div
+                class="current-token"
+                id="currentToken">
+
+                ---
+
+            </div>
+
+            <div
+                class="current-info"
+                id="currentInfo">
+
+                No token is currently being served.
+
+            </div>
+
+        </div>
+
+
+        <div class="current-actions">
+
+            <button
+                class="serve-next"
+                onclick="serveNext()">
+
+                ▶ Serve Next
+
+            </button>
+
+            <button
+                class="add-time"
+                onclick="openAddTimeModal()">
+
+                + Add Time
+
+            </button>
+
+            <button
+                class="skip"
+                onclick="skipCurrent()">
+
+                Skip
+
+            </button>
+
+            <button
+                class="complete"
+                onclick="completeCurrent()">
+
+                ✓ Complete
+
+            </button>
+
+        </div>
+
+    </section>
+
+
+    <!-- GENERATE -->
+
+    <div style="
+        display:flex;
+        justify-content:flex-end;
+        margin-bottom:20px;
+    ">
+
+        <button
+            class="primary-btn"
+            onclick="generateToken()">
+
+            + Generate New Token
+
+        </button>
+
+    </div>
+
+
+    <!-- CONTENT -->
+
+    <div class="content-grid">
+
+
+        <!-- WAITING QUEUE -->
+
+        <section class="panel">
+
+            <div class="panel-header">
+
+                <h3>
+                    Waiting Queue
+                </h3>
+
+                <span
+                    class="count"
+                    id="waitingCount">
+
+                    0
+
+                </span>
+
+            </div>
+
+
+            <div
+                class="queue-list"
+                id="waitingQueue">
+
+                <div class="empty">
+
+                    <div class="empty-icon">
+                        🎟️
+                    </div>
+
+                    No waiting tokens.
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- HISTORY -->
+
+        <section class="panel">
+
+            <div class="panel-header">
+
+                <h3>
+                    Queue History
+                </h3>
+
+                <span
+                    class="count"
+                    id="historyCount">
+
+                    0
+
+                </span>
+
+            </div>
+
+
+            <div
+                class="history"
+                id="history">
+
+                <div class="empty">
+
+                    <div class="empty-icon">
+                        📋
+                    </div>
+
+                    No history yet.
+
+                </div>
+
+            </div>
+
+        </section>
+
+    </div>
+
+
+</main>
+
+
+<!-- ================= ADD TIME MODAL ================= -->
+
+<div
+    class="modal-overlay"
+    id="addTimeModal">
+
+    <div class="modal">
+
+        <h2>
+            Add Time
+        </h2>
+
+        <p>
+            Add extra service time to the current token.
+        </p>
+
+        <input
+            type="number"
+            id="timeInput"
+            min="1"
+            placeholder="Minutes">
+
+        <div class="modal-actions">
+
+            <button
+                class="secondary-btn"
+                onclick="closeAddTimeModal()">
+
+                Cancel
+
+            </button>
+
+            <button
+                class="primary-btn"
+                onclick="addTime()">
+
+                Add Time
+
+            </button>
+
+        </div>
+
+    </div>
+
+</div>
+
+
+<!-- ================= TOAST ================= -->
+
+<div
+    class="toast"
+    id="toast">
+</div>
+
+
+<script src="../js/counter-queue.js" defer></script>
+
+</body>
+
+</html>

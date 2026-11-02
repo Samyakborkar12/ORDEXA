@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Scan QR Code - ORDEXA</title>
+    <script src="https://cdn.jsdelivr.net/npm/jsqr@1.4.0/dist/jsQR.min.js"></script>
+    <link rel="stylesheet" href="../css/qr-scanner.css">
+    <link rel="icon" type="image/svg+xml" href="../assets/logo/ordexa-favicon.svg">
+</head>
+<body>
+
+<header class="header">
+    <a href="home.html" class="logo"><img src="../assets/logo/ordexa-logo.svg" alt="ORDEXA" class="app-logo-img"> <span>ORDEXA</span></a>
+    <div class="header-title">Touchless Scanner</div>
+    <div style="width: 40px;"></div>
+</header>
+
+<main class="main">
+    <div class="scanner-title">Scan Standee QR</div>
+    <div class="scanner-desc">Point your phone camera at the QR code displayed at the entrance desk or clinic counter</div>
+
+    <button class="btn-camera" onclick="startCamera()" id="camBtn">📷 Open Camera</button>
+
+    <div class="scanner-frame">
+        <video id="videoElement" autoplay playsinline></video>
+        <div class="laser-beam"></div>
+        <div class="corner top-left"></div>
+        <div class="corner top-right"></div>
+        <div class="corner bottom-left"></div>
+        <div class="corner bottom-right"></div>
+    </div>
+
+    <!-- MANUAL CODE OPTION -->
+    <div class="manual-card">
+        <h3>Manual Organization ID</h3>
+        <p>If you don't have camera permissions, enter the Organization ID directly:</p>
+        <div class="form-row">
+            <input type="number" class="input-code" id="orgIdInput" placeholder="e.g. 1" min="1">
+            <button class="btn-join" onclick="handleManualJoin()">Continue →</button>
+        </div>
+    </div>
+</main>
+
+<!-- BOTTOM NAV -->
+<nav class="bottom-nav">
+    <div class="nav-inner">
+        <div class="nav-item" onclick="location.href='home.html'"><div class="nav-icon">⌂</div>Home</div>
+        <div class="nav-item" onclick="location.href='explore.html'"><div class="nav-icon">🔎</div>Explore</div>
+        <div class="nav-item" onclick="location.href='view-queue.html'"><div class="nav-icon">🎟</div>My Queue</div>
+        <div class="nav-item" onclick="location.href='notifications.html'"><div class="nav-icon">🔔</div>Alerts</div>
+        <div class="nav-item" onclick="location.href='profile.html'"><div class="nav-icon">👤</div>Profile</div>
+    </div>
+</nav>
+
+<script src="../js/qr-scanner.js" defer></script>
+</body>
+</html>

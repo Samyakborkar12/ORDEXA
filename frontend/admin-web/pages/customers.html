@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0">
+
+    <title>Customers - ORDEXA</title>
+
+    <link rel="stylesheet" href="../css/customers.css">
+
+    <link rel="icon" type="image/svg+xml" href="../assets/logo/ordexa-favicon.svg">
+</head>
+
+
+<body>
+
+
+<!-- ================= SIDEBAR ================= -->
+
+<aside class="sidebar">
+
+    <div class="logo">
+        <img src="../assets/logo/ordexa-logo.svg" alt="ORDEXA" class="sidebar-logo-img">
+        ORD<span>EXA</span>
+    </div>
+
+
+    <nav class="nav">
+
+        <a href="dashboard.html">
+            Dashboard
+        </a>
+
+        <a href="counters.html">
+            Counters
+        </a>
+
+        <a href="walk-ins.html">
+            Walk-ins
+        </a>
+
+        <a href="services.html">
+            Services
+        </a>
+
+        <a href="staff.html">
+            Staff
+        </a>
+
+        <a
+            href="customers.html"
+            class="active">
+            Customers
+        </a>
+
+        <a href="qr-codes.html">
+            QR Codes
+        </a>
+
+        <a href="analytics.html">
+            Analytics
+        </a>
+
+        <a href="feedback.html">
+            Feedback
+        </a>
+
+        <a href="notifications.html">
+            Notifications
+        </a>
+
+        <a href="organization.html">
+            Organization
+        </a>
+
+        <a href="settings.html">
+            Settings
+        </a>
+
+    </nav>
+
+
+    <button
+        class="logout"
+        onclick="logout()">
+
+        Logout
+
+    </button>
+
+</aside>
+
+
+<!-- ================= MAIN ================= -->
+
+<main class="main">
+
+
+    <div class="header">
+
+        <h1>
+            Joined Customers
+        </h1>
+
+        <p>
+            Customers who joined a service on the selected day.
+        </p>
+
+    </div>
+
+
+    <!-- ================= DAY ================= -->
+
+    <div class="day-bar">
+
+        <button
+            class="day-button"
+            onclick="changeDay(-1)">
+
+            ← Previous
+
+        </button>
+
+
+        <div
+            class="date-display"
+            id="dateDisplay">
+
+            Today
+
+        </div>
+
+
+        <button
+            class="day-button"
+            onclick="changeDay(1)">
+
+            Next →
+
+        </button>
+
+    </div>
+
+
+    <!-- ================= CUSTOMER LIST ================= -->
+
+    <div class="customers-card">
+
+        <div class="table-header">
+
+            <div>
+                Joined Customer
+            </div>
+
+            <div>
+                Joined Service
+            </div>
+
+            <div>
+                Time
+            </div>
+
+        </div>
+
+
+        <div id="customerList">
+
+            <div class="loading">
+                Loading customers...
+            </div>
+
+        </div>
+
+    </div>
+
+
+</main>
+
+
+<script src="../js/customers.js" defer></script>
+
+</body>
+
+</html>

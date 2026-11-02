@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Analytics & Insights - ORDEXA</title>
+    <link rel="stylesheet" href="../css/analytics.css">
+    <link rel="icon" type="image/svg+xml" href="../assets/logo/ordexa-favicon.svg">
+</head>
+<body>
+
+<!-- SIDEBAR -->
+<aside class="sidebar">
+    <div class="logo">
+        <img src="../assets/logo/ordexa-logo.svg" alt="ORDEXA" class="sidebar-logo-img">
+        ORD<span>EXA</span>
+    </div>
+    <nav class="nav">
+        <a href="dashboard.html">Dashboard</a>
+        <a href="counters.html">Counters</a>
+        <a href="live-queue.html">Live Queue</a>
+        <a href="walk-ins.html">Walk-ins</a>
+        <a href="services.html">Services</a>
+        <a href="staff.html">Staff</a>
+        <a href="customers.html">Customers</a>
+        <a href="qr-codes.html">QR Codes</a>
+        <a href="analytics.html" class="active">Analytics</a>
+        <a href="feedback.html">Feedback</a>
+        <a href="notifications.html">Notifications</a>
+        <a href="organization.html">Organization</a>
+        <a href="settings.html">Settings</a>
+    </nav>
+    <button class="logout" onclick="logout()">Logout</button>
+</aside>
+
+<!-- MAIN -->
+<main class="main">
+    <div class="topbar">
+        <div>
+            <h1>Analytics & Operational Insights</h1>
+            <p>Monitor queue performance, patient/customer wait times, and counter throughput</p>
+        </div>
+        <div style="display: flex; gap: 12px; align-items: center;">
+            <div class="time-filter">
+                <button class="filter-btn active" onclick="setPeriod('today')">Today</button>
+                <button class="filter-btn" onclick="setPeriod('week')">This Week</button>
+                <button class="filter-btn" onclick="setPeriod('month')">This Month</button>
+            </div>
+            <button class="btn-export" onclick="window.print()">
+                📥 Print Report
+            </button>
+        </div>
+    </div>
+
+    <!-- STATS -->
+    <div class="stats-grid">
+        <div class="stat-card" style="border-left-color: #00d9ff;">
+            <div class="stat-title">Total Tokens Issued</div>
+            <div class="stat-value" id="statTotalTokens">0</div>
+            <div class="stat-trend">↑ High throughput today</div>
+        </div>
+
+        <div class="stat-card" style="border-left-color: #28a745;">
+            <div class="stat-title">Completed Tokens</div>
+            <div class="stat-value" id="statCompleted">0</div>
+            <div class="stat-trend" id="statCompletionRate">0% Completion rate</div>
+        </div>
+
+        <div class="stat-card" style="border-left-color: #ffc107;">
+            <div class="stat-title">Currently Waiting</div>
+            <div class="stat-value" id="statWaiting">0</div>
+            <div class="stat-trend" style="color: #d39e00;">Active in waiting area</div>
+        </div>
+
+        <div class="stat-card" style="border-left-color: #e02424;">
+            <div class="stat-title">Avg Wait Time</div>
+            <div class="stat-value" id="statAvgWait">12 <span style="font-size: 16px; font-weight: normal;">min</span></div>
+            <div class="stat-trend" style="color: #627d98;">Optimal service pacing</div>
+        </div>
+    </div>
+
+    <!-- CHARTS -->
+    <div class="charts-grid">
+        <div class="chart-card">
+            <div class="chart-header">
+                <h3>Hourly Traffic Flow</h3>
+                <span class="chart-badge">Live Trend</span>
+            </div>
+            <div class="bar-chart" id="hourlyChart">
+                <!-- Hourly bars rendered here -->
+            </div>
+        </div>
+
+        <div class="chart-card">
+            <div class="chart-header">
+                <h3>Service Breakdown</h3>
+                <span class="chart-badge">By Department</span>
+            </div>
+            <div id="serviceList">
+                <p style="color: #829ab1; font-size: 13px;">Loading service metrics...</p>
+            </div>
+        </div>
+    </div>
+
+    <!-- COUNTER PERFORMANCE TABLE -->
+    <div class="table-card">
+        <div class="chart-header">
+            <h3>Counter Efficiency & Workload</h3>
+            <span class="chart-badge">All Desks</span>
+        </div>
+        <table>
+            <thead>
+                <tr>
+                    <th>Counter Name</th>
+                    <th>Status</th>
+                    <th>Tokens Handled</th>
+                    <th>Est. Utilization</th>
+                    <th>Health</th>
+                </tr>
+            </thead>
+            <tbody id="counterTableBody">
+                <tr><td colspan="5" style="text-align: center; color: #829ab1;">Loading counters...</td></tr>
+            </tbody>
+        </table>
+    </div>
+</main>
+
+<script src="../js/analytics.js" defer></script>
+</body>
+</html>

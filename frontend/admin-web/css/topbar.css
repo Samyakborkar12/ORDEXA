@@ -1,0 +1,55 @@
+/* =========================================================
+   ORDEXA Admin Portal - Topbar Stylesheet
+   frontend/admin-web/css/topbar.css
+   ========================================================= */
+
+.topbar {
+    background: #ffffff;
+    border-radius: 14px;
+    padding: 18px 22px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    box-shadow: 0 4px 18px rgba(0, 0, 0, 0.05);
+    margin-bottom: 25px;
+    border: 1px solid #e4edf2;
+}
+
+.topbar h1 {
+    font-size: 24px;
+    color: #06283d;
+    font-weight: 750;
+}
+
+.topbar p {
+    margin-top: 5px;
+    color: #718096;
+    font-size: 13px;
+}
+
+.admin {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
+
+.admin-circle {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    background: #00b8d9;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #06283d;
+    font-weight: 800;
+    font-size: 15px;
+    box-shadow: 0 2px 8px rgba(0, 184, 217, 0.25);
+}
+
+.admin-name {
+    font-size: 14px;
+    font-weight: 700;
+    color: #06283d;
+}
+

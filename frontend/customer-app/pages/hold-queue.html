@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hold My Queue - ORDEXA</title>
+    <link rel="stylesheet" href="../css/hold-queue.css">
+    <link rel="icon" type="image/svg+xml" href="../assets/logo/ordexa-favicon.svg">
+</head>
+<body>
+
+<header class="header">
+    <a href="home.html" class="logo"><img src="../assets/logo/ordexa-logo.svg" alt="ORDEXA" class="app-logo-img"> <span>ORDEXA</span></a>
+    <div class="header-title">Hold My Spot</div>
+    <div style="width: 40px;"></div>
+</header>
+
+<main class="main">
+    <div class="hold-card">
+        <div class="hold-icon">⏳</div>
+        <div class="hold-title">Running A Bit Late?</div>
+        <div class="hold-desc">
+            Pause your token temporarily. The counter will serve the next person while holding your priority until you arrive.
+        </div>
+
+        <div class="time-options">
+            <button class="time-btn active" onclick="selectDuration(5, this)">
+                <div class="time-val">5m</div>
+                <div class="time-lbl">Quick Pause</div>
+            </button>
+            <button class="time-btn" onclick="selectDuration(10, this)">
+                <div class="time-val">10m</div>
+                <div class="time-lbl">Standard</div>
+            </button>
+            <button class="time-btn" onclick="selectDuration(15, this)">
+                <div class="time-val">15m</div>
+                <div class="time-lbl">Extended</div>
+            </button>
+        </div>
+
+        <button class="btn-hold" onclick="confirmHold()" id="holdBtn">Pause My Queue Now</button>
+        <br>
+        <a href="live-queue.html" class="btn-cancel">← Return to live queue</a>
+    </div>
+</main>
+
+<!-- BOTTOM NAV -->
+<nav class="bottom-nav">
+    <div class="nav-inner">
+        <div class="nav-item" onclick="location.href='home.html'"><div class="nav-icon">⌂</div>Home</div>
+        <div class="nav-item" onclick="location.href='explore.html'"><div class="nav-icon">🔎</div>Explore</div>
+        <div class="nav-item active" onclick="location.href='view-queue.html'"><div class="nav-icon">🎟</div>My Queue</div>
+        <div class="nav-item" onclick="location.href='notifications.html'"><div class="nav-icon">🔔</div>Alerts</div>
+        <div class="nav-item" onclick="location.href='profile.html'"><div class="nav-icon">👤</div>Profile</div>
+    </div>
+</nav>
+
+<script src="../js/hold-queue.js" defer></script>
+</body>
+</html>

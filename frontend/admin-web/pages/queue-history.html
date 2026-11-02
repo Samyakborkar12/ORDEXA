@@ -1,0 +1,209 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Queue History - ORDEXA</title>
+
+    <link rel="stylesheet" href="../css/queue-history.css">
+
+    <link rel="icon" type="image/svg+xml" href="../assets/logo/ordexa-favicon.svg">
+</head>
+
+
+<body>
+
+
+<div class="container">
+
+
+    <!-- =========================
+         TOP
+    ========================= -->
+
+    <div class="top">
+
+        <button
+            class="back"
+            onclick="history.back()">
+
+            ←
+
+        </button>
+
+        <div class="logo">
+            ORDEXA
+        </div>
+
+    </div>
+
+
+    <h1>
+        Queue History
+    </h1>
+
+    <p class="subtitle">
+        View your previous queue visits.
+    </p>
+
+
+    <!-- =========================
+         LOADING
+    ========================= -->
+
+    <div
+        id="loading"
+        class="loading">
+
+        Loading your queue history...
+
+    </div>
+
+
+    <!-- =========================
+         EMPTY
+    ========================= -->
+
+    <div
+        id="empty"
+        class="empty"
+        style="display:none;">
+
+        <div class="empty-icon">
+            📋
+        </div>
+
+        <h2>
+            No Queue History
+        </h2>
+
+        <p>
+            Your completed queue visits will appear here.
+        </p>
+
+        <button
+            class="home-btn"
+            onclick="location.href='explore.html'">
+
+            Explore Organizations
+
+        </button>
+
+    </div>
+
+
+    <!-- =========================
+         ERROR
+    ========================= -->
+
+    <div
+        id="error"
+        class="error"
+        style="display:none;">
+
+        Unable to load queue history.
+
+    </div>
+
+
+    <!-- =========================
+         HISTORY
+    ========================= -->
+
+    <div
+        id="historyList"
+        style="display:none;">
+
+    </div>
+
+
+</div>
+
+
+<!-- =========================
+     BOTTOM NAV
+========================== -->
+
+<div class="bottom-nav">
+
+    <div class="nav-inner">
+
+
+        <div
+            class="nav-item"
+            onclick="location.href='home.html'">
+
+            <div class="nav-icon">
+                ⌂
+            </div>
+
+            Home
+
+        </div>
+
+
+        <div
+            class="nav-item"
+            onclick="location.href='explore.html'">
+
+            <div class="nav-icon">
+                ⌕
+            </div>
+
+            Explore
+
+        </div>
+
+
+        <div
+            class="nav-item"
+            onclick="location.href='live-queue.html'">
+
+            <div class="nav-icon">
+                🎟
+            </div>
+
+            My Queue
+
+        </div>
+
+
+        <div
+            class="nav-item"
+            onclick="location.href='notifications.html'">
+
+            <div class="nav-icon">
+                ♢
+            </div>
+
+            Alerts
+
+        </div>
+
+
+        <div
+            class="nav-item active"
+            onclick="location.href='profile.html'">
+
+            <div class="nav-icon">
+                ◉
+            </div>
+
+            Profile
+
+        </div>
+
+
+    </div>
+
+</div>
+
+
+<script src="../js/queue-history.js" defer></script>
+
+
+</body>
+
+</html>

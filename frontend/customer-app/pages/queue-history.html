@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Token History - ORDEXA</title>
+    <link rel="stylesheet" href="../css/queue-history.css">
+    <link rel="icon" type="image/svg+xml" href="../assets/logo/ordexa-favicon.svg">
+</head>
+<body>
+
+<header class="header">
+    <a href="home.html" class="logo"><img src="../assets/logo/ordexa-logo.svg" alt="ORDEXA" class="app-logo-img"> <span>ORDEXA</span></a>
+    <div class="header-title">My Token History</div>
+    <div style="width: 40px;"></div>
+</header>
+
+<main class="main">
+    <div class="filter-tabs">
+        <button class="filter-tab active" onclick="filterTokens('ALL')">All Visits</button>
+        <button class="filter-tab" onclick="filterTokens('COMPLETED')">Completed</button>
+        <button class="filter-tab" onclick="filterTokens('CANCELLED')">Cancelled / Left</button>
+    </div>
+
+    <div id="historyList">
+        <div style="text-align: center; padding: 40px; color: #8faabd;">Loading history...</div>
+    </div>
+</main>
+
+<!-- BOTTOM NAV -->
+<nav class="bottom-nav">
+    <div class="nav-inner">
+        <div class="nav-item" onclick="location.href='home.html'"><div class="nav-icon">⌂</div>Home</div>
+        <div class="nav-item" onclick="location.href='explore.html'"><div class="nav-icon">🔎</div>Explore</div>
+        <div class="nav-item" onclick="location.href='view-queue.html'"><div class="nav-icon">🎟</div>My Queue</div>
+        <div class="nav-item" onclick="location.href='notifications.html'"><div class="nav-icon">🔔</div>Alerts</div>
+        <div class="nav-item" onclick="location.href='profile.html'"><div class="nav-icon">👤</div>Profile</div>
+    </div>
+</nav>
+
+<script src="../js/queue-history.js" defer></script>
+</body>
+</html>

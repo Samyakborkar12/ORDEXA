@@ -1,0 +1,281 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0">
+
+    <title>ORDEXA - Organization</title>
+
+    <link rel="stylesheet" href="../css/organization.css">
+
+    <link rel="icon" type="image/svg+xml" href="../assets/logo/ordexa-favicon.svg">
+</head>
+
+
+<body>
+
+
+<!-- =====================================================
+     HEADER
+===================================================== -->
+
+<header class="header">
+
+    <div class="logo" onclick="goHome()">
+        <img src="../assets/logo/ordexa-logo.svg" alt="ORDEXA" class="app-logo-img">
+        <span>ORDEXA</span>
+    </div>
+
+
+    <button
+        class="back-btn"
+        onclick="goBack()">
+
+        ← Back
+
+    </button>
+
+</header>
+
+
+<!-- =====================================================
+     MAIN
+===================================================== -->
+
+<main class="main">
+
+
+    <!-- ORGANIZATION -->
+
+    <section
+        class="org-header"
+        id="orgHeader"
+        style="display:none;">
+
+        <div
+            class="org-icon"
+            id="orgIcon">
+
+            🏢
+
+        </div>
+
+
+        <div>
+
+            <div
+                class="org-type"
+                id="orgType">
+
+                ORGANIZATION
+
+            </div>
+
+
+            <h1
+                class="org-name"
+                id="orgName">
+
+                Organization
+
+            </h1>
+
+
+            <p
+                class="org-description"
+                id="orgDescription">
+
+                Loading...
+
+            </p>
+
+        </div>
+
+    </section>
+
+
+    <!-- LOADING -->
+
+    <div
+        id="loading"
+        class="loading">
+
+        Loading organization...
+
+    </div>
+
+
+    <!-- ERROR -->
+
+    <div
+        id="error"
+        class="error">
+
+        <div id="errorText">
+
+            Unable to load organization.
+
+        </div>
+
+
+        <button
+            class="retry-btn"
+            onclick="loadOrganization()">
+
+            Retry
+
+        </button>
+
+    </div>
+
+
+    <!-- SERVICES -->
+
+    <section
+        id="serviceSection"
+        style="display:none;">
+
+        <div class="section-header">
+
+            <h2>
+                Available Services
+            </h2>
+
+
+            <span
+                class="service-count"
+                id="serviceCount">
+
+                0 services
+
+            </span>
+
+        </div>
+
+
+        <div
+            class="services"
+            id="services">
+
+        </div>
+
+    </section>
+
+
+    <!-- EMPTY -->
+
+    <div
+        class="empty"
+        id="empty"
+        style="display:none;">
+
+        <div class="empty-icon">
+            📋
+        </div>
+
+
+        <h3 id="emptyTitle">
+            No Services Available
+        </h3>
+
+
+        <p id="emptyMessage">
+
+            This organization has not added
+            any services yet.
+
+        </p>
+
+    </div>
+
+</main>
+
+
+<!-- =====================================================
+     BOTTOM NAV
+===================================================== -->
+
+<nav class="bottom-nav">
+
+    <div class="nav-inner">
+
+
+        <div
+            class="nav-item"
+            onclick="goHome()">
+
+            <div class="nav-icon">
+                ⌂
+            </div>
+
+            Home
+
+        </div>
+
+
+        <div
+            class="nav-item active"
+            onclick="goExplore()">
+
+            <div class="nav-icon">
+                🔎
+            </div>
+
+            Explore
+
+        </div>
+
+
+        <div
+            class="nav-item"
+            onclick="openQueue()">
+
+            <div class="nav-icon">
+                🎟
+            </div>
+
+            My Queue
+
+        </div>
+
+
+        <div
+            class="nav-item"
+            onclick="openNotifications()">
+
+            <div class="nav-icon">
+                🔔
+            </div>
+
+            Alerts
+
+        </div>
+
+
+        <div
+            class="nav-item"
+            onclick="openProfile()">
+
+            <div class="nav-icon">
+                👤
+            </div>
+
+            Profile
+
+        </div>
+
+    </div>
+
+</nav>
+
+
+<script src="../js/organization.js" defer></script>
+
+</body>
+
+</html>

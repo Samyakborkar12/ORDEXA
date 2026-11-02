@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Profile - ORDEXA</title>
+    <link rel="stylesheet" href="../css/profile.css">
+    <link rel="icon" type="image/svg+xml" href="../assets/logo/ordexa-favicon.svg">
+</head>
+<body>
+
+<header class="header">
+    <a href="home.html" class="logo"><img src="../assets/logo/ordexa-logo.svg" alt="ORDEXA" class="app-logo-img"> <span>ORDEXA</span></a>
+    <div class="header-title">My Account</div>
+    <div style="width: 40px;"></div>
+</header>
+
+<main class="main">
+    <div class="profile-hero">
+        <div class="avatar-large" id="avatarInitial">U</div>
+        <div class="user-display-name" id="displayUserName">Customer Name</div>
+        <div class="user-display-email" id="displayUserEmail">customer@email.com</div>
+        <div class="badge-verified">✓ Active Customer Account</div>
+    </div>
+
+    <!-- EDIT PROFILE -->
+    <div class="card">
+        <div class="card-title">👤 Edit Personal Details</div>
+        <form onsubmit="handleUpdateProfile(event)">
+            <div class="form-group">
+                <label>Full Name</label>
+                <input type="text" class="form-control" id="inputName" required>
+            </div>
+            <div class="form-group">
+                <label>Phone Number</label>
+                <input type="tel" class="form-control" id="inputPhone" placeholder="+91 9876543210">
+            </div>
+            <div class="form-group">
+                <label>Email Address</label>
+                <input type="email" class="form-control" id="inputEmail" readonly style="opacity: 0.7;">
+            </div>
+            <button type="submit" class="save-btn" id="saveBtn">Save Profile</button>
+        </form>
+    </div>
+
+    <!-- QUICK ACTIONS -->
+    <div class="card">
+        <div class="card-title">⚡ Shortcuts & History</div>
+        <div class="menu-list">
+            <a href="queue-history.html" class="menu-item">
+                <div class="menu-left"><span>📜</span> Token History</div>
+                <span>→</span>
+            </a>
+            <a href="live-queue.html" class="menu-item">
+                <div class="menu-left"><span>🎟</span> Active Queue Tracker</div>
+                <span>→</span>
+            </a>
+            <a href="settings.html" class="menu-item">
+                <div class="menu-left"><span>⚙</span> App Settings</div>
+                <span>→</span>
+            </a>
+            <a href="help.html" class="menu-item">
+                <div class="menu-left"><span>❓</span> Help & FAQ</div>
+                <span>→</span>
+            </a>
+        </div>
+        <button class="btn-logout" onclick="logout()">Logout of ORDEXA</button>
+    </div>
+</main>
+
+<!-- BOTTOM NAV -->
+<nav class="bottom-nav">
+    <div class="nav-inner">
+        <div class="nav-item" onclick="location.href='home.html'"><div class="nav-icon">⌂</div>Home</div>
+        <div class="nav-item" onclick="location.href='explore.html'"><div class="nav-icon">🔎</div>Explore</div>
+        <div class="nav-item" onclick="location.href='view-queue.html'"><div class="nav-icon">🎟</div>My Queue</div>
+        <div class="nav-item" onclick="location.href='notifications.html'"><div class="nav-icon">🔔</div>Alerts</div>
+        <div class="nav-item active" onclick="location.href='profile.html'"><div class="nav-icon">👤</div>Profile</div>
+    </div>
+</nav>
+
+<script src="../js/profile.js" defer></script>
+</body>
+</html>

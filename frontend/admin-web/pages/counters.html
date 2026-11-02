@@ -1,0 +1,285 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1.0">
+
+    <title>Counters - ORDEXA</title>
+
+    <link rel="stylesheet" href="../css/counters.css">
+
+    <link rel="icon" type="image/svg+xml" href="../assets/logo/ordexa-favicon.svg">
+</head>
+
+
+<body>
+
+
+<!-- ================= SIDEBAR ================= -->
+
+<aside class="sidebar">
+
+    <div class="logo">
+        <img src="../assets/logo/ordexa-logo.svg" alt="ORDEXA" class="sidebar-logo-img">
+        ORD<span>EXA</span>
+    </div>
+
+    <nav class="nav">
+
+        <a href="dashboard.html">
+            Dashboard
+        </a>
+
+        <a href="counters.html" class="active">
+            Counters
+        </a>
+
+        <a href="live-queue.html">
+            Live Queue
+        </a>
+
+        <a href="walk-ins.html">
+            Walk-ins
+        </a>
+
+        <a href="services.html">
+            Services
+        </a>
+
+        <a href="staff.html">
+            Staff
+        </a>
+
+        <a href="customers.html">
+            Customers
+        </a>
+
+        <a href="qr-codes.html">
+            QR Codes
+        </a>
+
+        <a href="analytics.html">
+            Analytics
+        </a>
+
+        <a href="feedback.html">
+            Feedback
+        </a>
+
+        <a href="notifications.html">
+            Notifications
+        </a>
+
+        <a href="organization.html">
+            Organization
+        </a>
+
+        <a href="settings.html">
+            Settings
+        </a>
+
+    </nav>
+
+    <button class="logout" onclick="logout()">
+        Logout
+    </button>
+
+</aside>
+
+
+<!-- ================= MAIN ================= -->
+
+<main class="main">
+
+    <div class="topbar">
+
+        <div>
+
+            <h1>
+                Counters
+            </h1>
+
+            <p>
+                Manage your organization's service counters.
+            </p>
+
+        </div>
+
+        <div class="admin">
+
+            <div
+                class="admin-circle"
+                id="adminInitial">
+                A
+            </div>
+
+            <div
+                class="admin-name"
+                id="adminName">
+                Admin
+            </div>
+
+        </div>
+
+    </div>
+
+
+    <div class="page-header">
+
+        <div>
+
+            <h2>
+                Organization Counters
+            </h2>
+
+            <p id="organizationName">
+                Loading organization...
+            </p>
+
+        </div>
+
+        <button
+            class="add-btn"
+            onclick="openAddModal()">
+
+            + Add Counter
+
+        </button>
+
+    </div>
+
+
+    <div id="counterContainer">
+
+        <div class="empty">
+
+            <div class="empty-icon">
+                ⏳
+            </div>
+
+            <h3>
+                Loading counters...
+            </h3>
+
+            <p>
+                Please wait.
+            </p>
+
+        </div>
+
+    </div>
+
+</main>
+
+
+<!-- ================= MODAL ================= -->
+
+<div
+    id="modalOverlay"
+    class="modal-overlay">
+
+    <div class="modal">
+
+        <div class="modal-header">
+
+            <h2 id="modalTitle">
+                Add Counter
+            </h2>
+
+            <button
+                class="close-btn"
+                onclick="closeModal()">
+                ×
+            </button>
+
+        </div>
+
+
+        <div class="field">
+
+            <label for="counterNameInput">
+                Counter Name *
+            </label>
+
+            <input
+                type="text"
+                id="counterNameInput"
+                placeholder="Example: Counter 1"
+                maxlength="100">
+
+        </div>
+
+
+        <div class="field">
+
+            <label for="staffSelect">
+                Assign Staff
+            </label>
+
+            <select id="staffSelect">
+
+                <option value="">
+                    No staff assigned
+                </option>
+
+            </select>
+
+        </div>
+
+
+        <div class="field">
+
+            <label for="statusSelect">
+                Counter Status
+            </label>
+
+            <select id="statusSelect">
+
+                <option value="OPEN">
+                    Open
+                </option>
+
+                <option value="CLOSED">
+                    Closed
+                </option>
+
+            </select>
+
+        </div>
+
+
+        <div class="modal-footer">
+
+            <button
+                class="cancel-btn"
+                onclick="closeModal()">
+                Cancel
+            </button>
+
+            <button
+                id="saveButton"
+                class="save-btn"
+                onclick="saveCounter()">
+                Save Counter
+            </button>
+
+        </div>
+
+    </div>
+
+</div>
+
+
+<!-- ================= TOAST ================= -->
+
+<div id="toast" class="toast"></div>
+
+
+<script src="../js/counters.js" defer></script>
+
+</body>
+</html>

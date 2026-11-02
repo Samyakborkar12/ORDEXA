@@ -1,0 +1,304 @@
+* {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+            background: #071d33;
+            color: white;
+            min-height: 100vh;
+            padding-bottom: 85px;
+        }
+
+        .container {
+            max-width: 650px;
+            margin: auto;
+            padding: 25px 18px;
+        }
+
+        /* =========================
+           TOP
+        ========================= */
+
+        .top {
+            display: flex;
+            align-items: center;
+            gap: 15px;
+            margin-bottom: 28px;
+        }
+
+        .back {
+            width: 42px;
+            height: 42px;
+            border: 1px solid #23415d;
+            border-radius: 12px;
+            background: #0c2944;
+            color: white;
+            font-size: 22px;
+            cursor: pointer;
+        }
+
+        .logo {
+            color: #19d3e6;
+            font-size: 22px;
+            font-weight: bold;
+        }
+
+        h1 {
+            font-size: 28px;
+            margin-bottom: 7px;
+        }
+
+        .subtitle {
+            color: #8ea8bc;
+            margin-bottom: 25px;
+        }
+
+        /* =========================
+           LOADING
+        ========================= */
+
+        .loading {
+            text-align: center;
+            color: #8ea8bc;
+            padding: 60px 20px;
+        }
+
+        /* =========================
+           EMPTY
+        ========================= */
+
+        .empty {
+            text-align: center;
+            padding: 60px 20px;
+            color: #8ea8bc;
+        }
+
+        .empty-icon {
+            font-size: 52px;
+            margin-bottom: 15px;
+        }
+
+        .empty h2 {
+            color: white;
+            margin-bottom: 10px;
+        }
+
+        .home-btn {
+            width: 100%;
+            padding: 15px;
+            border: none;
+            border-radius: 13px;
+            background: #19d3e6;
+            color: #031521;
+            font-weight: bold;
+            font-size: 16px;
+            cursor: pointer;
+            margin-top: 25px;
+        }
+
+        /* =========================
+           HISTORY CARD
+        ========================= */
+
+        .history-card {
+            background: #0c2944;
+            border: 1px solid #193d59;
+            border-radius: 18px;
+            padding: 18px;
+            margin-bottom: 12px;
+        }
+
+        .history-top {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            gap: 15px;
+            margin-bottom: 14px;
+        }
+
+        .token {
+            font-size: 28px;
+            font-weight: bold;
+            color: #19d3e6;
+        }
+
+        .status {
+            padding: 7px 12px;
+            border-radius: 20px;
+            font-size: 11px;
+            font-weight: bold;
+        }
+
+        .status.waiting {
+            background: #143d53;
+            color: #19d3e6;
+        }
+
+        .status.serving {
+            background: #17463e;
+            color: #7ff3dc;
+        }
+
+        .status.served {
+            background: #17463e;
+            color: #7ff3dc;
+        }
+
+        .status.skipped {
+            background: #49351b;
+            color: #ffd28a;
+        }
+
+        .status.cancelled {
+            background: #422727;
+            color: #ffb2b2;
+        }
+
+        .details {
+            border-top: 1px solid #193d59;
+            padding-top: 13px;
+        }
+
+        .detail-row {
+            display: flex;
+            justify-content: space-between;
+            gap: 15px;
+            padding: 5px 0;
+        }
+
+        .detail-label {
+            color: #718ba0;
+            font-size: 13px;
+        }
+
+        .detail-value {
+            color: white;
+            font-size: 13px;
+            text-align: right;
+        }
+
+        .date {
+            color: #718ba0;
+            font-size: 12px;
+            margin-top: 12px;
+        }
+
+        /* =========================
+           ERROR
+        ========================= */
+
+        .error {
+            text-align: center;
+            color: #ffb2b2;
+            padding: 50px 20px;
+        }
+
+        /* =========================
+           BOTTOM NAV
+        ========================= */
+
+        .bottom-nav {
+            position: fixed;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            height: 72px;
+            background: #06182a;
+            border-top: 1px solid #193d59;
+            display: flex;
+            justify-content: center;
+            z-index: 10;
+        }
+
+        .nav-inner {
+            width: 100%;
+            max-width: 650px;
+            display: flex;
+            justify-content: space-around;
+            align-items: center;
+        }
+
+        .nav-item {
+            color: #718ba0;
+            text-align: center;
+            font-size: 11px;
+            cursor: pointer;
+        }
+
+        .nav-icon {
+            font-size: 20px;
+            margin-bottom: 4px;
+        }
+
+        .nav-item.active {
+            color: #19d3e6;
+        }
+
+        /* =========================
+           RESPONSIVE
+        ========================= */
+
+        @media (max-width: 450px) {
+
+            .history-top {
+                align-items: flex-start;
+            }
+
+            .token {
+                font-size: 25px;
+            }
+
+            .detail-row {
+                flex-direction: column;
+                gap: 2px;
+            }
+
+            .detail-value {
+                text-align: left;
+            }
+
+        }
+
+/* ORDEXA Asset & Logo Styling */
+.sidebar-logo-img {
+    width: 28px;
+    height: 28px;
+    object-fit: contain;
+    vertical-align: middle;
+    flex-shrink: 0;
+}
+.sidebar .logo {
+    display: flex !important;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+}
+.app-logo-img {
+    width: 26px;
+    height: 26px;
+    object-fit: contain;
+    vertical-align: middle;
+    flex-shrink: 0;
+}
+.header .logo {
+    display: flex !important;
+    align-items: center;
+    gap: 10px;
+}
+.auth-logo-img, .brand-logo-img {
+    width: 46px;
+    height: 46px;
+    object-fit: contain;
+    display: block;
+    margin: 0 auto 12px;
+}
+.welcome-logo-img {
+    width: 44px;
+    height: 44px;
+    object-fit: contain;
+    vertical-align: middle;
+    margin-right: 10px;
+}

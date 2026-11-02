@@ -1,0 +1,47 @@
+:root {
+    /* ORDEXA Theme */
+    --bg-primary: #0b132b;
+    --bg-secondary: #1c2541;
+    --bg-card: #202c4a;
+    --bg-card-hover: #263657;
+
+    --accent: #38bdf8;
+    --accent-dark: #0284c7;
+    --accent-hover: #0369a1;
+
+    --text-primary: #f8fafc;
+    --text-secondary: #94a3b8;
+    --text-muted: #64748b;
+
+    --border-color: #334155;
+    --border-accent: rgba(56, 189, 248, 0.35);
+
+    --success: #22c55e;
+    --danger: #ef4444;
+
+    /* Typography */
+    --font-primary: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+
+    /* Layout */
+    --container-width: 1100px;
+
+    /* Spacing */
+    --space-xs: 5px;
+    --space-sm: 10px;
+    --space-md: 16px;
+    --space-lg: 24px;
+    --space-xl: 32px;
+    --space-2xl: 48px;
+
+    /* Radius */
+    --radius-sm: 8px;
+    --radius-md: 12px;
+    --radius-lg: 16px;
+    --radius-xl: 20px;
+
+    /* Effects */
+    --shadow-card: 0 10px 30px rgba(0, 0, 0, 0.2);
+    --shadow-large: 0 20px 50px rgba(0, 0, 0, 0.3);
+
+    --transition: 0.25s ease;
+}

@@ -1,0 +1,82 @@
+.message-box {
+            display: none;
+            margin-top: 18px;
+            padding: 14px 16px;
+            border-radius: 10px;
+            font-size: 14px;
+            line-height: 1.5;
+        }
+
+        .message-box.error {
+            display: block;
+            background: #351d27;
+            border: 1px solid #653341;
+            color: #ff9aaa;
+        }
+
+        .message-box.success {
+            display: block;
+            background: #123d38;
+            border: 1px solid #236b5e;
+            color: #63e5cc;
+        }
+
+        .token-result {
+            margin-top: 25px;
+        }
+
+        .join-queue-button:disabled {
+            opacity: 0.6;
+            cursor: not-allowed;
+        }
+
+        .service-time-info {
+            margin-top: 10px;
+            color: #8ea7b9;
+            font-size: 13px;
+        }
+
+        .service-time-info strong {
+            color: #19d3e6;
+        }
+
+/* ORDEXA Asset & Logo Styling */
+.sidebar-logo-img {
+    width: 28px;
+    height: 28px;
+    object-fit: contain;
+    vertical-align: middle;
+    flex-shrink: 0;
+}
+.sidebar .logo {
+    display: flex !important;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+}
+.app-logo-img {
+    width: 26px;
+    height: 26px;
+    object-fit: contain;
+    vertical-align: middle;
+    flex-shrink: 0;
+}
+.header .logo {
+    display: flex !important;
+    align-items: center;
+    gap: 10px;
+}
+.auth-logo-img, .brand-logo-img {
+    width: 46px;
+    height: 46px;
+    object-fit: contain;
+    display: block;
+    margin: 0 auto 12px;
+}
+.welcome-logo-img {
+    width: 44px;
+    height: 44px;
+    object-fit: contain;
+    vertical-align: middle;
+    margin-right: 10px;
+}

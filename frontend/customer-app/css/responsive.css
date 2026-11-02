@@ -1,0 +1,202 @@
+/* =========================
+   SMALL DESKTOP / TABLET
+========================= */
+
+@media (max-width: 1150px) {
+    .main-header,
+    .main-container,
+    .main-footer {
+        width: calc(100% - 40px);
+    }
+
+    .organization-grid {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+}
+
+/* =========================
+   TABLET
+========================= */
+
+@media (max-width: 768px) {
+    .main-header {
+        flex-wrap: wrap;
+        justify-content: space-between;
+        gap: 18px;
+
+        padding: 16px 20px;
+    }
+
+    .main-nav {
+        order: 3;
+        width: 100%;
+
+        justify-content: center;
+        gap: 25px;
+
+        padding-top: 12px;
+        border-top: 1px solid var(--border-color);
+    }
+
+    .main-header > .aero-button {
+        margin-left: auto;
+    }
+
+    .main-container {
+        padding-top: 35px;
+        gap: 25px;
+    }
+
+    .welcome-section {
+        padding: 35px 22px;
+    }
+
+    .welcome-section p {
+        font-size: 15px;
+    }
+
+    .steps {
+        grid-template-columns: 1fr;
+        gap: 15px;
+    }
+
+    .step {
+        padding: 18px;
+    }
+}
+
+/* =========================
+   MOBILE
+========================= */
+
+@media (max-width: 500px) {
+    .main-header,
+    .main-container,
+    .main-footer {
+        width: calc(100% - 24px);
+    }
+
+    .main-header {
+        padding: 15px;
+        gap: 15px;
+    }
+
+    .logo {
+        font-size: 18px;
+    }
+
+    .logo-icon {
+        width: 34px;
+        height: 34px;
+        font-size: 19px;
+    }
+
+    .main-header > .aero-button {
+        padding: 9px 12px;
+        font-size: 12px;
+    }
+
+    .main-nav {
+        gap: 0;
+        justify-content: space-between;
+    }
+
+    .main-nav a {
+        font-size: 12px;
+    }
+
+    .main-container {
+        padding-top: 25px;
+        padding-bottom: 25px;
+        gap: 22px;
+    }
+
+    .welcome-section {
+        padding: 30px 18px;
+        border-radius: var(--radius-lg);
+    }
+
+    .welcome-section h1 {
+        font-size: 30px;
+    }
+
+    .welcome-section p {
+        font-size: 14px;
+        line-height: 1.7;
+    }
+
+    .aero-titlebar {
+        padding: 14px 17px;
+    }
+
+    .window-content,
+    .how-it-works .window-content {
+        padding: 20px 16px;
+    }
+
+    .section-description {
+        font-size: 14px;
+        margin-bottom: 20px;
+    }
+
+    .organization-grid {
+        grid-template-columns: 1fr;
+        gap: 15px;
+    }
+
+    .organization-card {
+        min-height: auto;
+        padding: 22px;
+    }
+
+    .organization-card p {
+        margin-bottom: 20px;
+    }
+
+    .organization-card .aero-button {
+        width: 100%;
+    }
+
+    .steps {
+        gap: 12px;
+    }
+
+    .step {
+        gap: 13px;
+        padding: 16px;
+    }
+
+    .main-footer {
+        padding: 20px 10px;
+    }
+
+    .main-footer p {
+        font-size: 11px;
+    }
+}
+
+/* =========================
+   EXTRA SMALL SCREENS
+========================= */
+
+@media (max-width: 350px) {
+    .main-header {
+        justify-content: center;
+    }
+
+    .main-header > .aero-button {
+        margin-left: 0;
+    }
+
+    .main-nav {
+        gap: 12px;
+    }
+
+    .main-nav a {
+        font-size: 11px;
+    }
+
+    .welcome-section h1 {
+        font-size: 26px;
+    }
+}

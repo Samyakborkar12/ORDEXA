@@ -1,0 +1,578 @@
+* {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+
+        body {
+
+            font-family: Arial, sans-serif;
+
+            background: #071d33;
+
+            color: white;
+
+            min-height: 100vh;
+
+            padding-bottom: 85px;
+        }
+
+
+        /* ================================
+           HEADER
+        ================================= */
+
+        .header {
+
+            height: 72px;
+
+            background: #0b2742;
+
+            border-bottom: 1px solid #174666;
+
+            display: flex;
+
+            align-items: center;
+
+            justify-content: space-between;
+
+            padding: 0 7%;
+
+            position: sticky;
+
+            top: 0;
+
+            z-index: 100;
+        }
+
+
+        .logo {
+
+            color: #19d3e6;
+
+            font-size: 25px;
+
+            font-weight: bold;
+
+            letter-spacing: 2px;
+
+            cursor: pointer;
+        }
+
+
+        .back-btn {
+
+            border: 1px solid #315a76;
+
+            background: #123753;
+
+            color: white;
+
+            padding: 9px 15px;
+
+            border-radius: 8px;
+
+            cursor: pointer;
+
+            font-size: 14px;
+        }
+
+
+        .back-btn:hover {
+
+            border-color: #19d3e6;
+        }
+
+
+        /* ================================
+           MAIN
+        ================================= */
+
+        .main {
+
+            width: 86%;
+
+            max-width: 800px;
+
+            margin: auto;
+
+            padding: 40px 0 50px;
+        }
+
+
+        /* ================================
+           LOADING
+        ================================= */
+
+        .loading {
+
+            text-align: center;
+
+            padding: 70px 20px;
+
+            color: #19d3e6;
+
+            font-size: 15px;
+        }
+
+
+        /* ================================
+           SERVICE CARD
+        ================================= */
+
+        .service-card {
+
+            background: #0d2945;
+
+            border: 1px solid #174666;
+
+            border-radius: 20px;
+
+            overflow: hidden;
+
+            display: none;
+        }
+
+
+        .service-top {
+
+            padding: 35px;
+
+            text-align: center;
+
+            border-bottom: 1px solid #174666;
+        }
+
+
+        .service-icon {
+
+            width: 80px;
+
+            height: 80px;
+
+            border-radius: 20px;
+
+            background: #123753;
+
+            display: flex;
+
+            align-items: center;
+
+            justify-content: center;
+
+            font-size: 38px;
+
+            margin: 0 auto 20px;
+        }
+
+
+        .service-status {
+
+            display: inline-block;
+
+            padding: 7px 13px;
+
+            border-radius: 20px;
+
+            background: #123d38;
+
+            color: #63e5cc;
+
+            font-size: 11px;
+
+            font-weight: bold;
+
+            margin-bottom: 15px;
+        }
+
+
+        .service-status.unavailable {
+
+            background: #351d27;
+
+            color: #ff9aaa;
+        }
+
+
+        .service-name {
+
+            font-size: 30px;
+
+            margin-bottom: 10px;
+        }
+
+
+        .organization {
+
+            color: #19d3e6;
+
+            font-size: 14px;
+        }
+
+
+        /* ================================
+           DETAILS
+        ================================= */
+
+        .details {
+
+            padding: 28px 30px;
+        }
+
+
+        .details h2 {
+
+            font-size: 19px;
+
+            margin-bottom: 12px;
+        }
+
+
+        .description {
+
+            color: #9db4c8;
+
+            line-height: 1.6;
+
+            font-size: 14px;
+
+            margin-bottom: 25px;
+        }
+
+
+        /* ================================
+           INFO
+        ================================= */
+
+        .info-grid {
+
+            display: grid;
+
+            grid-template-columns: repeat(2, 1fr);
+
+            gap: 12px;
+
+            margin-bottom: 28px;
+        }
+
+
+        .info-box {
+
+            background: #071d33;
+
+            border: 1px solid #174666;
+
+            border-radius: 11px;
+
+            padding: 17px;
+        }
+
+
+        .info-label {
+
+            color: #7e99aa;
+
+            font-size: 11px;
+
+            margin-bottom: 7px;
+        }
+
+
+        .info-value {
+
+            font-size: 16px;
+
+            font-weight: bold;
+        }
+
+
+        /* ================================
+           VIEW QUEUE STATUS BUTTON
+        ================================= */
+
+        .view-queue-btn {
+
+            width: 100%;
+
+            padding: 14px;
+
+            border: 1px solid #19d3e6;
+
+            border-radius: 10px;
+
+            background: transparent;
+
+            color: #19d3e6;
+
+            font-size: 15px;
+
+            font-weight: bold;
+
+            cursor: pointer;
+
+            margin-bottom: 12px;
+
+            transition: 0.2s;
+        }
+
+
+        .view-queue-btn:hover {
+
+            background: #123753;
+        }
+
+
+        .view-queue-btn:disabled {
+
+            border-color: #315064;
+
+            color: #8da4b3;
+
+            cursor: not-allowed;
+
+            background: transparent;
+        }
+
+
+        /* ================================
+           JOIN BUTTON
+        ================================= */
+
+        .join-btn {
+
+            width: 100%;
+
+            padding: 15px;
+
+            border: none;
+
+            border-radius: 10px;
+
+            background: #19d3e6;
+
+            color: #071d33;
+
+            font-size: 16px;
+
+            font-weight: bold;
+
+            cursor: pointer;
+
+            transition: 0.2s;
+        }
+
+
+        .join-btn:hover {
+
+            opacity: 0.9;
+        }
+
+
+        .join-btn:disabled {
+
+            background: #315064;
+
+            color: #8da4b3;
+
+            cursor: not-allowed;
+
+            opacity: 1;
+        }
+
+
+        /* ================================
+           ERROR
+        ================================= */
+
+        .error {
+
+            display: none;
+
+            background: #351d27;
+
+            border: 1px solid #653341;
+
+            border-radius: 13px;
+
+            padding: 22px;
+
+            text-align: center;
+
+            color: #ff9aaa;
+        }
+
+
+        .retry-btn {
+
+            margin-top: 14px;
+
+            padding: 9px 18px;
+
+            border: none;
+
+            border-radius: 8px;
+
+            background: #19d3e6;
+
+            color: #071d33;
+
+            font-weight: bold;
+
+            cursor: pointer;
+        }
+
+
+        /* ================================
+           BOTTOM NAV
+        ================================= */
+
+        .bottom-nav {
+
+            position: fixed;
+
+            bottom: 0;
+
+            left: 0;
+
+            right: 0;
+
+            height: 68px;
+
+            background: #0b2742;
+
+            border-top: 1px solid #174666;
+
+            z-index: 100;
+        }
+
+
+        .nav-inner {
+
+            width: 500px;
+
+            max-width: 100%;
+
+            margin: auto;
+
+            height: 100%;
+
+            display: flex;
+
+            justify-content: space-around;
+
+            align-items: center;
+        }
+
+
+        .nav-item {
+
+            color: #7892a6;
+
+            text-align: center;
+
+            cursor: pointer;
+
+            font-size: 11px;
+
+            min-width: 65px;
+        }
+
+
+        .nav-icon {
+
+            font-size: 20px;
+
+            margin-bottom: 4px;
+        }
+
+
+        .nav-item.active {
+
+            color: #19d3e6;
+        }
+
+
+        /* ================================
+           MOBILE
+        ================================= */
+
+        @media (max-width: 600px) {
+
+            .header {
+
+                padding: 0 5%;
+            }
+
+
+            .main {
+
+                width: 90%;
+            }
+
+
+            .service-top {
+
+                padding: 28px 20px;
+            }
+
+
+            .service-name {
+
+                font-size: 25px;
+            }
+
+
+            .details {
+
+                padding: 24px 20px;
+            }
+
+
+            .info-grid {
+
+                grid-template-columns: 1fr;
+            }
+
+        }
+
+/* ORDEXA Asset & Logo Styling */
+.sidebar-logo-img {
+    width: 28px;
+    height: 28px;
+    object-fit: contain;
+    vertical-align: middle;
+    flex-shrink: 0;
+}
+.sidebar .logo {
+    display: flex !important;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+}
+.app-logo-img {
+    width: 26px;
+    height: 26px;
+    object-fit: contain;
+    vertical-align: middle;
+    flex-shrink: 0;
+}
+.header .logo {
+    display: flex !important;
+    align-items: center;
+    gap: 10px;
+}
+.auth-logo-img, .brand-logo-img {
+    width: 46px;
+    height: 46px;
+    object-fit: contain;
+    display: block;
+    margin: 0 auto 12px;
+}
+.welcome-logo-img {
+    width: 44px;
+    height: 44px;
+    object-fit: contain;
+    vertical-align: middle;
+    margin-right: 10px;
+}

@@ -1,0 +1,482 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0"
+    >
+
+    <title>Services | ORDEXA</title>
+
+
+    <link rel="stylesheet" href="../css/services.css">
+
+    <link rel="icon" type="image/svg+xml" href="../assets/logo/ordexa-favicon.svg">
+</head>
+
+
+<body>
+
+
+<header class="header">
+
+    <a
+        href="../index.html"
+        class="logo"
+    >
+
+        <span class="logo-icon">
+            O
+        </span>
+
+        <span>
+            ORDEXA
+        </span>
+
+    </a>
+
+
+    <a
+        href="dashboard.html"
+        class="back-button"
+    >
+
+        ← Dashboard
+
+    </a>
+
+</header>
+
+
+<main class="main">
+
+
+    <div class="eyebrow">
+        ORGANIZATION MANAGEMENT
+    </div>
+
+
+    <h1>
+        Services
+    </h1>
+
+
+    <p class="subtitle">
+        Manage your organization's services and decide which counters can handle each one.
+    </p>
+
+
+    <div class="organization-bar">
+
+        <div class="organization-info">
+
+            <div class="organization-icon">
+                🏢
+            </div>
+
+
+            <div>
+
+                <div class="organization-label">
+                    ORGANIZATION
+                </div>
+
+
+                <div
+                    class="organization-name"
+                    id="organizationName"
+                >
+
+                    Loading...
+
+                </div>
+
+            </div>
+
+        </div>
+
+
+        <button
+            class="add-button"
+            onclick="openAddModal()"
+        >
+
+            + Add Service
+
+        </button>
+
+    </div>
+
+
+    <div
+        class="error-box"
+        id="errorBox"
+    ></div>
+
+
+    <div class="toolbar">
+
+        <div class="section-title">
+
+            <h2>
+                Your Services
+            </h2>
+
+
+            <p>
+                All services configured for this organization.
+            </p>
+
+        </div>
+
+
+        <div class="toolbar-right">
+
+            <div class="search-box">
+
+                <span class="search-icon">
+                    🔎
+                </span>
+
+
+                <input
+                    type="text"
+                    id="searchInput"
+                    placeholder="Search services..."
+                >
+
+            </div>
+
+
+            <select
+                class="filter-select"
+                id="statusFilter"
+            >
+
+                <option value="ALL">
+                    All Status
+                </option>
+
+
+                <option value="ACTIVE">
+                    Active
+                </option>
+
+
+                <option value="INACTIVE">
+                    Inactive
+                </option>
+
+            </select>
+
+        </div>
+
+    </div>
+
+
+    <div class="count-row">
+
+        <div
+            class="service-count"
+            id="serviceCount"
+        >
+
+            0 services
+
+        </div>
+
+    </div>
+
+
+    <div
+        class="loading"
+        id="loading"
+    >
+
+        <div class="spinner"></div>
+
+        Loading services...
+
+    </div>
+
+
+    <div
+        class="service-grid"
+        id="serviceGrid"
+    ></div>
+
+
+    <div
+        class="empty"
+        id="emptyState"
+    >
+
+        <div class="empty-icon">
+            ⚙️
+        </div>
+
+
+        <h3 id="emptyTitle">
+            No services yet
+        </h3>
+
+
+        <p id="emptyMessage">
+            Add your first service and assign one or more counters.
+        </p>
+
+
+        <button
+            class="empty-add"
+            onclick="openAddModal()"
+        >
+
+            + Add First Service
+
+        </button>
+
+    </div>
+
+</main>
+
+
+<!-- =========================================
+     MODAL
+========================================= -->
+
+<div
+    class="modal-overlay"
+    id="modalOverlay"
+>
+
+    <div class="modal">
+
+
+        <div class="modal-header">
+
+            <div>
+
+                <h2 id="modalTitle">
+                    Add Service
+                </h2>
+
+
+                <p>
+                    Configure service details and counter access.
+                </p>
+
+            </div>
+
+
+            <button
+                class="close-button"
+                onclick="closeModal()"
+            >
+
+                ×
+
+            </button>
+
+        </div>
+
+
+        <form id="serviceForm">
+
+
+            <div class="form-group">
+
+                <label class="form-label">
+
+                    Service Name
+
+                    <span class="required">
+                        *
+                    </span>
+
+                </label>
+
+
+                <input
+                    type="text"
+                    id="serviceName"
+                    class="input"
+                    placeholder="e.g. General Consultation"
+                    maxlength="100"
+                    required
+                >
+
+            </div>
+
+
+            <div class="form-group">
+
+                <label class="form-label">
+                    Description
+                </label>
+
+
+                <textarea
+                    id="serviceDescription"
+                    class="textarea"
+                    maxlength="500"
+                    placeholder="Briefly describe this service..."
+                ></textarea>
+
+            </div>
+
+
+            <div class="form-row">
+
+
+                <div class="form-group">
+
+                    <label class="form-label">
+
+                        Average Service Time
+
+                        <span class="required">
+                            *
+                        </span>
+
+                    </label>
+
+
+                    <input
+                        type="number"
+                        id="averageServiceTime"
+                        class="input"
+                        min="1"
+                        max="1440"
+                        placeholder="Minutes"
+                        required
+                    >
+
+                </div>
+
+
+                <div class="form-group">
+
+                    <label class="form-label">
+                        Status
+                    </label>
+
+
+                    <select
+                        id="serviceStatus"
+                        class="select"
+                    >
+
+                        <option value="ACTIVE">
+                            ACTIVE
+                        </option>
+
+
+                        <option value="INACTIVE">
+                            INACTIVE
+                        </option>
+
+                    </select>
+
+                </div>
+
+            </div>
+
+
+            <div class="counter-section">
+
+                <div class="counter-title">
+
+                    Assign Counters
+
+                    <span class="required">
+                        *
+                    </span>
+
+                </div>
+
+
+                <div class="counter-help">
+
+                    Select every counter that is allowed to handle this service.
+
+                </div>
+
+
+                <div
+                    class="counter-list"
+                    id="counterList"
+                >
+
+                    Loading counters...
+
+                </div>
+
+            </div>
+
+
+            <div class="modal-actions">
+
+
+                <button
+                    type="button"
+                    class="cancel-button"
+                    onclick="closeModal()"
+                >
+
+                    Cancel
+
+                </button>
+
+
+                <button
+                    type="submit"
+                    class="save-button"
+                    id="saveButton"
+                >
+
+                    Save Service
+
+                </button>
+
+            </div>
+
+        </form>
+
+    </div>
+
+</div>
+
+
+<!-- =========================================
+     TOAST
+========================================= -->
+
+<div
+    class="toast"
+    id="toast"
+>
+
+    <div
+        class="toast-title"
+        id="toastTitle"
+    ></div>
+
+
+    <div
+        class="toast-message"
+        id="toastMessage"
+    ></div>
+
+</div>
+
+
+<script src="../js/services.js" defer></script>
+
+
+</body>
+
+</html>

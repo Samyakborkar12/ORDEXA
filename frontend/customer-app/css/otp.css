@@ -1,0 +1,159 @@
+* {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+            font-family: Arial, sans-serif;
+        }
+
+        body {
+            background: #071d33;
+            color: white;
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding: 20px;
+        }
+
+        .auth-card {
+            background: #0d2945;
+            border: 1px solid #174666;
+            border-radius: 20px;
+            padding: 38px 28px;
+            width: 100%;
+            max-width: 400px;
+            text-align: center;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.3);
+        }
+
+        .logo {
+            color: #19d3e6;
+            font-size: 26px;
+            font-weight: bold;
+            letter-spacing: 2px;
+            margin-bottom: 20px;
+        }
+
+        .otp-icon {
+            font-size: 40px;
+            margin-bottom: 12px;
+        }
+
+        .title {
+            font-size: 20px;
+            font-weight: 800;
+            margin-bottom: 6px;
+        }
+
+        .subtitle {
+            font-size: 13px;
+            color: #8faabd;
+            margin-bottom: 28px;
+            line-height: 1.5;
+        }
+
+        /* 6 OTP Inputs */
+        .otp-inputs {
+            display: flex;
+            justify-content: center;
+            gap: 10px;
+            margin-bottom: 25px;
+        }
+
+        .otp-box {
+            width: 45px;
+            height: 52px;
+            background: #071d33;
+            border: 1px solid #174666;
+            border-radius: 10px;
+            color: #19d3e6;
+            font-size: 22px;
+            font-weight: bold;
+            text-align: center;
+            outline: none;
+            transition: 0.2s;
+        }
+
+        .otp-box:focus {
+            border-color: #19d3e6;
+            box-shadow: 0 0 10px rgba(25, 211, 230, 0.3);
+        }
+
+        .btn-verify {
+            width: 100%;
+            padding: 13px;
+            background: #19d3e6;
+            color: #071d33;
+            border: none;
+            border-radius: 9px;
+            font-size: 15px;
+            font-weight: bold;
+            cursor: pointer;
+            transition: 0.2s;
+        }
+
+        .btn-verify:hover {
+            opacity: 0.9;
+        }
+
+        .resend-box {
+            margin-top: 22px;
+            font-size: 13px;
+            color: #8faabd;
+        }
+
+        .resend-btn {
+            color: #19d3e6;
+            background: transparent;
+            border: none;
+            font-weight: bold;
+            cursor: pointer;
+            text-decoration: underline;
+        }
+
+        .resend-btn:disabled {
+            color: #627d98;
+            cursor: not-allowed;
+            text-decoration: none;
+        }
+
+/* ORDEXA Asset & Logo Styling */
+.sidebar-logo-img {
+    width: 28px;
+    height: 28px;
+    object-fit: contain;
+    vertical-align: middle;
+    flex-shrink: 0;
+}
+.sidebar .logo {
+    display: flex !important;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+}
+.app-logo-img {
+    width: 26px;
+    height: 26px;
+    object-fit: contain;
+    vertical-align: middle;
+    flex-shrink: 0;
+}
+.header .logo {
+    display: flex !important;
+    align-items: center;
+    gap: 10px;
+}
+.auth-logo-img, .brand-logo-img {
+    width: 46px;
+    height: 46px;
+    object-fit: contain;
+    display: block;
+    margin: 0 auto 12px;
+}
+.welcome-logo-img {
+    width: 44px;
+    height: 44px;
+    object-fit: contain;
+    vertical-align: middle;
+    margin-right: 10px;
+}

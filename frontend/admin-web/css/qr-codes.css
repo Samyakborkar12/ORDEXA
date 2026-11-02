@@ -1,0 +1,340 @@
+* {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+            font-family: 'Segoe UI', Arial, sans-serif;
+        }
+
+        body {
+            background: #f4f8fb;
+            color: #102a43;
+        }
+
+        /* Sidebar */
+        .sidebar {
+            position: fixed;
+            left: 0;
+            top: 0;
+            width: 245px;
+            height: 100vh;
+            background: #06283d;
+            color: white;
+            padding: 24px 15px;
+            z-index: 100;
+        }
+
+        .logo {
+            font-size: 25px;
+            font-weight: 800;
+            text-align: center;
+            margin-bottom: 35px;
+            letter-spacing: 1px;
+        }
+
+        .logo span {
+            color: #00d9ff;
+        }
+
+        .nav {
+            display: flex;
+            flex-direction: column;
+            gap: 7px;
+        }
+
+        .nav a {
+            text-decoration: none;
+            color: #c6d8e2;
+            padding: 12px 14px;
+            border-radius: 8px;
+            font-size: 14px;
+            font-weight: 600;
+            transition: 0.2s;
+        }
+
+        .nav a:hover,
+        .nav a.active {
+            background: #0b405d;
+            color: #00d9ff;
+        }
+
+        .logout {
+            position: absolute;
+            left: 15px;
+            right: 15px;
+            bottom: 22px;
+            background: #0b405d;
+            color: #ffb4b4;
+            border: none;
+            padding: 12px;
+            border-radius: 8px;
+            cursor: pointer;
+            font-weight: 700;
+        }
+
+        .logout:hover {
+            background: #123f55;
+        }
+
+        /* Main Content */
+        .main {
+            margin-left: 245px;
+            min-height: 100vh;
+            padding: 25px 30px;
+        }
+
+        /* Topbar */
+        .topbar {
+            background: white;
+            border-radius: 14px;
+            padding: 18px 22px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            box-shadow: 0 4px 18px rgba(0,0,0,0.05);
+            margin-bottom: 25px;
+        }
+
+        .topbar h1 {
+            font-size: 24px;
+            color: #06283d;
+        }
+
+        .topbar p {
+            margin-top: 5px;
+            color: #718096;
+            font-size: 13px;
+        }
+
+        /* Content Layout */
+        .qr-layout {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 25px;
+        }
+
+        .card {
+            background: white;
+            border-radius: 16px;
+            padding: 26px;
+            box-shadow: 0 4px 18px rgba(0,0,0,0.04);
+        }
+
+        .card h2 {
+            font-size: 18px;
+            color: #06283d;
+            margin-bottom: 8px;
+        }
+
+        .card-desc {
+            font-size: 13px;
+            color: #627d98;
+            margin-bottom: 20px;
+        }
+
+        .form-group {
+            margin-bottom: 18px;
+        }
+
+        .form-group label {
+            display: block;
+            font-size: 13px;
+            font-weight: 700;
+            color: #334e68;
+            margin-bottom: 6px;
+        }
+
+        .form-control {
+            width: 100%;
+            padding: 11px 14px;
+            border: 1px solid #d9e2ec;
+            border-radius: 8px;
+            font-size: 14px;
+            outline: none;
+            background: #f8fafc;
+        }
+
+        .form-control:focus {
+            border-color: #00d9ff;
+            background: white;
+        }
+
+        /* QR Poster Preview */
+        .poster-preview {
+            background: linear-gradient(135deg, #06283d 0%, #0d4b6e 100%);
+            border-radius: 18px;
+            padding: 30px;
+            color: white;
+            text-align: center;
+            box-shadow: 0 10px 30px rgba(6,40,61,0.25);
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        .poster-brand {
+            font-size: 22px;
+            font-weight: 900;
+            letter-spacing: 2px;
+            color: #00d9ff;
+            margin-bottom: 4px;
+        }
+
+        .poster-tagline {
+            font-size: 12px;
+            color: #b0d4ec;
+            letter-spacing: 1px;
+            text-transform: uppercase;
+            margin-bottom: 20px;
+        }
+
+        .poster-title {
+            font-size: 22px;
+            font-weight: 800;
+            margin-bottom: 4px;
+        }
+
+        .poster-subtitle {
+            font-size: 14px;
+            color: #8bc8ee;
+            margin-bottom: 20px;
+        }
+
+        .qr-box {
+            background: white;
+            padding: 16px;
+            border-radius: 16px;
+            box-shadow: 0 8px 24px rgba(0,0,0,0.2);
+            margin-bottom: 20px;
+            display: inline-block;
+        }
+
+        #qrcode img, #qrcode canvas {
+            display: block;
+            margin: auto;
+        }
+
+        .poster-steps {
+            display: flex;
+            justify-content: center;
+            gap: 15px;
+            margin-top: 10px;
+            font-size: 12px;
+            color: #e2f0fb;
+        }
+
+        .poster-step {
+            background: rgba(255,255,255,0.1);
+            padding: 8px 12px;
+            border-radius: 8px;
+            backdrop-filter: blur(4px);
+        }
+
+        .btn-group {
+            display: flex;
+            gap: 12px;
+            margin-top: 20px;
+            width: 100%;
+        }
+
+        .btn {
+            flex: 1;
+            padding: 12px;
+            border: none;
+            border-radius: 8px;
+            font-weight: 700;
+            font-size: 14px;
+            cursor: pointer;
+            transition: 0.2s;
+            text-align: center;
+        }
+
+        .btn-primary {
+            background: #00d9ff;
+            color: #06283d;
+        }
+
+        .btn-primary:hover {
+            background: #52e6ff;
+        }
+
+        .btn-secondary {
+            background: #06283d;
+            color: white;
+        }
+
+        .btn-secondary:hover {
+            background: #0b405d;
+        }
+
+        /* Printable Area */
+        @media print {
+            body * {
+                visibility: hidden;
+            }
+            .poster-preview, .poster-preview * {
+                visibility: visible;
+            }
+            .poster-preview {
+                position: absolute;
+                left: 0;
+                top: 0;
+                width: 100%;
+                box-shadow: none;
+                background: white !important;
+                color: black !important;
+            }
+            .poster-brand {
+                color: #0077b6 !important;
+            }
+            .poster-tagline, .poster-subtitle {
+                color: #555 !important;
+            }
+            .poster-step {
+                background: #eee !important;
+                color: black !important;
+            }
+            .btn-group {
+                display: none !important;
+            }
+        }
+
+/* ORDEXA Asset & Logo Styling */
+.sidebar-logo-img {
+    width: 28px;
+    height: 28px;
+    object-fit: contain;
+    vertical-align: middle;
+    flex-shrink: 0;
+}
+.sidebar .logo {
+    display: flex !important;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+}
+.app-logo-img {
+    width: 26px;
+    height: 26px;
+    object-fit: contain;
+    vertical-align: middle;
+    flex-shrink: 0;
+}
+.header .logo {
+    display: flex !important;
+    align-items: center;
+    gap: 10px;
+}
+.auth-logo-img, .brand-logo-img {
+    width: 46px;
+    height: 46px;
+    object-fit: contain;
+    display: block;
+    margin: 0 auto 12px;
+}
+.welcome-logo-img {
+    width: 44px;
+    height: 44px;
+    object-fit: contain;
+    vertical-align: middle;
+    margin-right: 10px;
+}

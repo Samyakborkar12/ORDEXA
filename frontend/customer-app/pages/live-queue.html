@@ -1,0 +1,399 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1.0">
+
+    <title>ORDEXA - My Queue</title>
+
+    <link rel="stylesheet" href="../css/live-queue.css">
+
+    <link rel="icon" type="image/svg+xml" href="../assets/logo/ordexa-favicon.svg">
+</head>
+
+
+<body>
+
+
+<!-- ================= HEADER ================= -->
+
+<header class="header">
+
+    <div class="logo" onclick="goHome()">
+        <img src="../assets/logo/ordexa-logo.svg" alt="ORDEXA" class="app-logo-img">
+        <span>ORDEXA</span>
+    </div>
+
+
+    <div class="header-right">
+
+        <div class="icon-btn"
+             onclick="openNotifications()">
+
+            🔔
+
+        </div>
+
+
+        <div class="icon-btn"
+             onclick="openProfile()">
+
+            👤
+
+        </div>
+
+    </div>
+
+</header>
+
+
+
+<!-- ================= MAIN ================= -->
+
+<main class="main">
+
+
+    <!-- HEADING -->
+
+    <div class="heading">
+
+        <h1>
+            My Queue
+        </h1>
+
+        <p>
+            Track your active queue and token status.
+        </p>
+
+    </div>
+
+
+
+    <!-- LOADING -->
+
+    <div id="loading"
+         class="loading">
+
+        Loading your queue...
+
+    </div>
+
+
+
+    <!-- ERROR -->
+
+    <div id="error"
+         class="error">
+
+        <div id="error-message">
+            Unable to load queue.
+        </div>
+
+        <button class="retry-btn"
+                onclick="loadQueue()">
+
+            Retry
+
+        </button>
+
+    </div>
+
+
+
+    <!-- NO QUEUE -->
+
+    <div id="noQueue"
+         class="no-queue">
+
+        <div class="no-queue-icon">
+            🎟️
+        </div>
+
+        <h2>
+            No Active Queue
+        </h2>
+
+        <p>
+            You don't have an active queue right now.
+        </p>
+
+        <a href="explore.html"
+           class="explore-btn">
+
+            Explore Organizations →
+
+        </a>
+
+    </div>
+
+
+
+    <!-- QUEUE CARD -->
+
+    <section id="queueCard"
+             class="queue-card"
+             style="display:none;">
+
+
+        <!-- QUEUE HEADER -->
+
+        <div class="queue-header">
+
+
+            <div class="organization-info">
+
+
+                <div class="org-icon"
+                     id="org-icon">
+
+                    🏢
+
+                </div>
+
+
+                <div>
+
+                    <h2 id="organization-name">
+                        Organization
+                    </h2>
+
+                    <p id="service-name">
+                        Service
+                    </p>
+
+                </div>
+
+
+            </div>
+
+
+            <div class="status"
+                 id="queue-status">
+
+                WAITING
+
+            </div>
+
+
+        </div>
+
+
+
+        <!-- TOKEN -->
+
+        <div class="token-section">
+
+            <div class="token-label">
+
+                YOUR TOKEN
+
+            </div>
+
+
+            <!-- IMPORTANT:
+                 This is where the REAL token code
+                 like RTO-PUC-001 is displayed.
+            -->
+
+            <div class="token-number"
+                 id="token-number">
+
+                --
+
+            </div>
+
+
+            <div class="ahead-text">
+
+                <span id="people-ahead-main">
+                    0
+                </span>
+
+                people ahead of you
+
+            </div>
+
+        </div>
+
+
+
+        <!-- STATS -->
+
+        <div class="stats">
+
+
+            <div class="stat">
+
+                <div class="stat-value"
+                     id="current-token">
+
+                    --
+
+                </div>
+
+                <div class="stat-label">
+
+                    Current Token
+
+                </div>
+
+            </div>
+
+
+            <div class="stat">
+
+                <div class="stat-value"
+                     id="people-ahead">
+
+                    0
+
+                </div>
+
+                <div class="stat-label">
+
+                    People Ahead
+
+                </div>
+
+            </div>
+
+
+            <div class="stat">
+
+                <div class="stat-value"
+                     id="estimated-wait">
+
+                    0 min
+
+                </div>
+
+                <div class="stat-label">
+
+                    Estimated Wait
+
+                </div>
+
+            </div>
+
+
+        </div>
+
+
+
+        <!-- ACTIONS -->
+
+        <div class="actions">
+
+
+            <button class="refresh-btn"
+                    onclick="loadQueue()">
+
+                ↻ Refresh
+
+            </button>
+
+
+            <button class="leave-btn"
+                    onclick="leaveQueue()">
+
+                Leave Queue
+
+            </button>
+
+
+        </div>
+
+
+    </section>
+
+
+</main>
+
+
+
+<!-- ================= BOTTOM NAV ================= -->
+
+<nav class="bottom-nav">
+
+    <div class="nav-inner">
+
+
+        <div class="nav-item"
+             onclick="goHome()">
+
+            <div class="nav-icon">
+                ⌂
+            </div>
+
+            Home
+
+        </div>
+
+
+
+        <div class="nav-item"
+             onclick="openExplore()">
+
+            <div class="nav-icon">
+                🔎
+            </div>
+
+            Explore
+
+        </div>
+
+
+
+        <div class="nav-item active">
+
+            <div class="nav-icon">
+                🎟
+            </div>
+
+            My Queue
+
+        </div>
+
+
+
+        <div class="nav-item"
+             onclick="openNotifications()">
+
+            <div class="nav-icon">
+                🔔
+            </div>
+
+            Alerts
+
+        </div>
+
+
+
+        <div class="nav-item"
+             onclick="openProfile()">
+
+            <div class="nav-icon">
+                👤
+            </div>
+
+            Profile
+
+        </div>
+
+
+    </div>
+
+</nav>
+
+
+
+<script src="../js/live-queue.js" defer></script>
+
+
+</body>
+
+</html>

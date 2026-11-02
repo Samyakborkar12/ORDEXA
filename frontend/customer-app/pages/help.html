@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Help & FAQ - ORDEXA</title>
+    <link rel="stylesheet" href="../css/help.css">
+    <link rel="icon" type="image/svg+xml" href="../assets/logo/ordexa-favicon.svg">
+</head>
+<body>
+
+<header class="header">
+    <a href="home.html" class="logo"><img src="../assets/logo/ordexa-logo.svg" alt="ORDEXA" class="app-logo-img"> <span>ORDEXA</span></a>
+    <div class="header-title">Help & Support</div>
+    <div style="width: 40px;"></div>
+</header>
+
+<main class="main">
+    <div class="help-hero">
+        <h1>Frequently Asked Questions</h1>
+        <p>Everything you need to know about using ORDEXA Smart Queue</p>
+    </div>
+
+    <div class="faq-item active">
+        <div class="faq-question" onclick="toggleFaq(this)">
+            How do I join a queue and get a token?
+            <span class="arrow">▼</span>
+        </div>
+        <div class="faq-answer">
+            You can either tap <strong>Explore</strong> to find your clinic, bank or hospital, or tap <strong>Scan QR</strong> to scan the standee at the entrance. Select your required service and confirm to get an instant digital token.
+        </div>
+    </div>
+
+    <div class="faq-item">
+        <div class="faq-question" onclick="toggleFaq(this)">
+            Can I leave the waiting area while in queue?
+            <span class="arrow">▼</span>
+        </div>
+        <div class="faq-answer">
+            Yes! That is the core benefit of ORDEXA. You can go to a café, run an errand, or wait comfortably. Keep the Live Queue tab open on your phone; it will beep and notify you when 2 people are ahead of you.
+        </div>
+    </div>
+
+    <div class="faq-item">
+        <div class="faq-question" onclick="toggleFaq(this)">
+            What if I am running late?
+            <span class="arrow">▼</span>
+        </div>
+        <div class="faq-answer">
+            Tap <strong>Hold Spot</strong> in the queue view to pause your token for 5 to 15 minutes. The counter will serve the next person while holding your position. Tap <strong>Rejoin</strong> as soon as you're back.
+        </div>
+    </div>
+
+    <div class="faq-item">
+        <div class="faq-question" onclick="toggleFaq(this)">
+            How is the estimated wait time calculated?
+            <span class="arrow">▼</span>
+        </div>
+        <div class="faq-answer">
+            Wait times are calculated based on the number of customers currently ahead of you multiplied by the average service handling duration of the assigned counter desk.
+        </div>
+    </div>
+
+    <!-- CONTACT CARD -->
+    <div class="contact-card">
+        <h3>Still need assistance?</h3>
+        <p>Our support desk is available to assist you with active queue queries.</p>
+        <a href="mailto:support@ordexa.com" class="btn-contact">✉️ Email Support</a>
+    </div>
+</main>
+
+<!-- BOTTOM NAV -->
+<nav class="bottom-nav">
+    <div class="nav-inner">
+        <div class="nav-item" onclick="location.href='home.html'"><div class="nav-icon">⌂</div>Home</div>
+        <div class="nav-item" onclick="location.href='explore.html'"><div class="nav-icon">🔎</div>Explore</div>
+        <div class="nav-item" onclick="location.href='view-queue.html'"><div class="nav-icon">🎟</div>My Queue</div>
+        <div class="nav-item" onclick="location.href='notifications.html'"><div class="nav-icon">🔔</div>Alerts</div>
+        <div class="nav-item" onclick="location.href='profile.html'"><div class="nav-icon">👤</div>Profile</div>
+    </div>
+</nav>
+
+<script src="../js/help.js" defer></script>
+</body>
+</html>

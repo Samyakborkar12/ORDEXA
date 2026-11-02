@@ -1,0 +1,222 @@
+* {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+            font-family: Arial, sans-serif;
+        }
+
+        body {
+            background: #071d33;
+            color: white;
+            min-height: 100vh;
+            padding-bottom: 90px;
+        }
+
+        /* HEADER */
+        .header {
+            height: 72px;
+            background: #0b2742;
+            border-bottom: 1px solid #174666;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding: 0 7%;
+            position: sticky;
+            top: 0;
+            z-index: 100;
+        }
+
+        .logo {
+            color: #19d3e6;
+            font-size: 25px;
+            font-weight: bold;
+            letter-spacing: 2px;
+            text-decoration: none;
+        }
+
+        .header-title {
+            font-size: 16px;
+            font-weight: 700;
+            color: #dceaf3;
+        }
+
+        /* MAIN */
+        .main {
+            width: 86%;
+            max-width: 650px;
+            margin: auto;
+            padding: 30px 0;
+        }
+
+        .help-hero {
+            text-align: center;
+            margin-bottom: 30px;
+        }
+
+        .help-hero h1 {
+            font-size: 24px;
+            font-weight: 800;
+            margin-bottom: 8px;
+        }
+
+        .help-hero p {
+            font-size: 14px;
+            color: #8faabd;
+        }
+
+        /* FAQ ACCORDION */
+        .faq-item {
+            background: #0d2945;
+            border: 1px solid #174666;
+            border-radius: 14px;
+            margin-bottom: 12px;
+            overflow: hidden;
+            transition: 0.2s;
+        }
+
+        .faq-question {
+            padding: 18px 20px;
+            font-size: 15px;
+            font-weight: 700;
+            cursor: pointer;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .faq-question:hover {
+            color: #19d3e6;
+        }
+
+        .faq-answer {
+            padding: 0 20px 18px;
+            font-size: 13px;
+            color: #8faabd;
+            line-height: 1.6;
+            display: none;
+            border-top: 1px solid rgba(23, 70, 102, 0.5);
+            padding-top: 14px;
+        }
+
+        .faq-item.active .faq-answer {
+            display: block;
+        }
+
+        .faq-item.active .arrow {
+            transform: rotate(180deg);
+        }
+
+        .arrow {
+            transition: transform 0.2s;
+            color: #19d3e6;
+        }
+
+        /* CONTACT CARD */
+        .contact-card {
+            background: linear-gradient(135deg, #0b2742, #123753);
+            border: 1px solid #174666;
+            border-radius: 18px;
+            padding: 26px;
+            text-align: center;
+            margin-top: 30px;
+        }
+
+        .contact-card h3 {
+            font-size: 17px;
+            margin-bottom: 8px;
+            color: #19d3e6;
+        }
+
+        .contact-card p {
+            font-size: 13px;
+            color: #8faabd;
+            margin-bottom: 16px;
+        }
+
+        .btn-contact {
+            background: #19d3e6;
+            color: #071d33;
+            border: none;
+            padding: 11px 22px;
+            border-radius: 8px;
+            font-weight: bold;
+            font-size: 13px;
+            cursor: pointer;
+            text-decoration: none;
+            display: inline-block;
+        }
+
+        /* BOTTOM NAV */
+        .bottom-nav {
+            position: fixed;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            height: 68px;
+            background: #0b2742;
+            border-top: 1px solid #174666;
+            display: flex;
+            justify-content: center;
+            z-index: 100;
+        }
+
+        .nav-inner {
+            width: 500px;
+            display: flex;
+            justify-content: space-around;
+            align-items: center;
+        }
+
+        .nav-item {
+            color: #7892a6;
+            text-align: center;
+            cursor: pointer;
+            font-size: 11px;
+            min-width: 70px;
+        }
+
+        .nav-item .nav-icon {
+            font-size: 20px;
+            margin-bottom: 4px;
+        }
+
+/* ORDEXA Asset & Logo Styling */
+.sidebar-logo-img {
+    width: 28px;
+    height: 28px;
+    object-fit: contain;
+    vertical-align: middle;
+    flex-shrink: 0;
+}
+.sidebar .logo {
+    display: flex !important;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+}
+.app-logo-img {
+    width: 26px;
+    height: 26px;
+    object-fit: contain;
+    vertical-align: middle;
+    flex-shrink: 0;
+}
+.header .logo {
+    display: flex !important;
+    align-items: center;
+    gap: 10px;
+}
+.auth-logo-img, .brand-logo-img {
+    width: 46px;
+    height: 46px;
+    object-fit: contain;
+    display: block;
+    margin: 0 auto 12px;
+}
+.welcome-logo-img {
+    width: 44px;
+    height: 44px;
+    object-fit: contain;
+    vertical-align: middle;
+    margin-right: 10px;
+}

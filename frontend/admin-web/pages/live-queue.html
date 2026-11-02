@@ -1,0 +1,259 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Live Queue | ORDEXA</title>
+
+    <link rel="stylesheet" href="../css/live-queue.css">
+    <link rel="icon" type="image/svg+xml" href="../assets/logo/ordexa-favicon.svg">
+</head>
+
+<body>
+
+<header class="topbar">
+    <div class="brand">
+        <div class="brand-logo">O</div>
+        <div class="brand-name">ORDEXA</div>
+    </div>
+
+    <div class="top-actions">
+        <button class="btn" onclick="goBack()">← Back</button>
+        <button class="btn" onclick="refreshAll()">↻ Refresh</button>
+    </div>
+</header>
+
+
+<main class="container">
+
+    <div class="eyebrow">LIVE QUEUE MANAGEMENT</div>
+
+    <h1 id="pageTitle">Live Queue</h1>
+
+    <p class="subtitle" id="pageSubtitle">
+        Loading queue information...
+    </p>
+
+    <div id="messageBox" class="message"></div>
+
+    <!-- ================= MODE / MAIN INFO ================= -->
+
+    <section id="mainInfo" class="card">
+        <div class="loading">
+            Loading...
+        </div>
+    </section>
+
+
+    <!-- ================= COUNTER MODE ================= -->
+
+    <section id="counterServicesSection"
+             class="card"
+             style="display:none;">
+
+        <div class="card-title">Assigned Services</div>
+
+        <div class="card-subtitle">
+            Services assigned to this counter.
+            These services can be handled from this live queue.
+        </div>
+
+        <div id="assignedServices"
+             class="service-list">
+        </div>
+    </section>
+
+
+    <!-- ================= SERVICE MODE ================= -->
+
+    <section id="serviceCountersSection"
+             class="card"
+             style="display:none;">
+
+        <div class="card-title">Assigned Counters</div>
+
+        <div class="card-subtitle">
+            Counters assigned to this service.
+            Select a counter to manage its live queue.
+        </div>
+
+        <div id="assignedCounters"
+             class="counter-list">
+        </div>
+    </section>
+
+
+    <!-- ================= COUNTER QUEUE ================= -->
+
+    <section id="queueSection"
+             class="card"
+             style="display:none;">
+
+        <div class="card-title" id="queueTitle">
+            Live Queue
+        </div>
+
+        <div class="card-subtitle" id="queueSubtitle">
+            Manage customers waiting at this counter.
+        </div>
+
+        <!-- CURRENT TOKEN -->
+
+        <div id="currentBox" class="current-box">
+            <div class="current-label">
+                Now Serving
+            </div>
+
+            <div id="currentToken"
+                 class="current-token">
+                —
+            </div>
+
+            <div id="currentService"
+                 class="current-service">
+                No customer currently being served
+            </div>
+        </div>
+
+
+        <!-- QUEUE STATS -->
+
+        <div class="info-grid">
+
+            <div class="info-box">
+                <div class="info-label">
+                    Waiting
+                </div>
+
+                <div id="waitingCount"
+                     class="info-value">
+                    0
+                </div>
+            </div>
+
+            <div class="info-box">
+                <div class="info-label">
+                    Total Queue
+                </div>
+
+                <div id="totalCount"
+                     class="info-value">
+                    0
+                </div>
+            </div>
+
+            <div class="info-box">
+                <div class="info-label">
+                    Counter Status
+                </div>
+
+                <div id="queueCounterStatus"
+                     class="info-value">
+                    —
+                </div>
+            </div>
+
+            <div class="info-box">
+                <div class="info-label">
+                    Selected Service
+                </div>
+
+                <div id="selectedServiceName"
+                     class="info-value">
+                    All Services
+                </div>
+            </div>
+
+        </div>
+
+
+        <!-- COUNTER MODE SERVICE FILTER -->
+
+        <div id="serviceFilterArea"
+             style="display:none;">
+
+            <div class="queue-controls">
+
+                <select id="serviceFilter">
+                    <option value="">
+                        All Assigned Services
+                    </option>
+                </select>
+
+                <button class="btn btn-primary"
+                        onclick="serveNext()">
+                    ▶ Serve Next
+                </button>
+
+            </div>
+
+        </div>
+
+
+        <!-- WALK IN -->
+
+        <div id="walkInArea"
+             style="display:none; margin-top:28px;">
+
+            <div class="card-title"
+                 style="font-size:17px;">
+                Add Walk-in
+            </div>
+
+            <div class="card-subtitle">
+                Generate a token for a customer who is physically present.
+            </div>
+
+            <div class="walkin-grid">
+
+                <select id="walkInService">
+                    <option value="">
+                        Select Service
+                    </option>
+                </select>
+
+                <input id="walkInName"
+                       type="text"
+                       placeholder="Customer name">
+
+                <input id="walkInPhone"
+                       type="text"
+                       placeholder="Phone number">
+
+                <button class="btn btn-primary"
+                        onclick="generateWalkIn()">
+                    + Generate Token
+                </button>
+
+            </div>
+
+        </div>
+
+
+        <!-- QUEUE TABLE -->
+
+        <div style="margin-top:30px;">
+
+            <div class="card-title"
+                 style="font-size:17px;">
+                Queue
+            </div>
+
+            <div id="queueTableContainer">
+                <div class="loading">
+                    Loading queue...
+                </div>
+            </div>
+
+        </div>
+
+    </section>
+
+</main>
+
+
+<script src="../js/live-queue.js" defer></script>
+
+</body>
+</html>

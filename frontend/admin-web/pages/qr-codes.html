@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>QR Codes & Kiosk Standees - ORDEXA</title>
+    <!-- Lightweight standard QR generator -->
+    <script src="https://cdn.jsdelivr.net/npm/qrcodejs@1.0.0/qrcode.min.js"></script>
+    <link rel="stylesheet" href="../css/qr-codes.css">
+    <link rel="icon" type="image/svg+xml" href="../assets/logo/ordexa-favicon.svg">
+</head>
+<body>
+
+<!-- SIDEBAR -->
+<aside class="sidebar">
+    <div class="logo">
+        <img src="../assets/logo/ordexa-logo.svg" alt="ORDEXA" class="sidebar-logo-img">
+        ORD<span>EXA</span>
+    </div>
+    <nav class="nav">
+        <a href="dashboard.html">Dashboard</a>
+        <a href="counters.html">Counters</a>
+        <a href="live-queue.html">Live Queue</a>
+        <a href="walk-ins.html">Walk-ins</a>
+        <a href="services.html">Services</a>
+        <a href="staff.html">Staff</a>
+        <a href="customers.html">Customers</a>
+        <a href="qr-codes.html" class="active">QR Codes</a>
+        <a href="analytics.html">Analytics</a>
+        <a href="feedback.html">Feedback</a>
+        <a href="notifications.html">Notifications</a>
+        <a href="organization.html">Organization</a>
+        <a href="settings.html">Settings</a>
+    </nav>
+    <button class="logout" onclick="logout()">Logout</button>
+</aside>
+
+<!-- MAIN -->
+<main class="main">
+    <div class="topbar">
+        <div>
+            <h1>Smart QR Codes & Standees</h1>
+            <p>Generate touchless QR posters for table standees and entrance kiosks</p>
+        </div>
+        <button class="btn btn-secondary" style="flex: none; padding: 10px 18px;" onclick="window.print()">
+            🖨️ Print Standee Poster
+        </button>
+    </div>
+
+    <div class="qr-layout">
+        <!-- Configuration Card -->
+        <div class="card">
+            <h2>Configure QR Target</h2>
+            <p class="card-desc">Choose what customers see immediately when scanning this QR code</p>
+
+            <div class="form-group">
+                <label>Select QR Type</label>
+                <select class="form-control" id="qrType" onchange="onQrTypeChange()">
+                    <option value="org">Entire Organization (View all available services)</option>
+                    <option value="service">Direct Service (1-Tap Join Queue)</option>
+                </select>
+            </div>
+
+            <div class="form-group" id="serviceSelectGroup" style="display: none;">
+                <label>Select Service</label>
+                <select class="form-control" id="serviceSelect" onchange="updateQr()">
+                    <option value="">-- Choose a Service --</option>
+                </select>
+            </div>
+
+            <div class="form-group">
+                <label>Display Heading on Standee</label>
+                <input type="text" class="form-control" id="customHeading" value="Scan to Join Queue" oninput="updatePosterText()">
+            </div>
+
+            <div class="form-group">
+                <label>Subheading Note</label>
+                <input type="text" class="form-control" id="customSubheading" value="Get your digital token instantly on your phone" oninput="updatePosterText()">
+            </div>
+
+            <div class="form-group">
+                <label>Direct Joining URL</label>
+                <input type="text" class="form-control" id="targetUrlInput" readonly style="color: #627d98;">
+            </div>
+
+            <div class="btn-group">
+                <button class="btn btn-primary" onclick="downloadQr()">📥 Download QR Code</button>
+                <button class="btn btn-secondary" onclick="window.print()">🖨️ Print A4 Standee</button>
+            </div>
+        </div>
+
+        <!-- Poster Standee Preview -->
+        <div>
+            <div class="poster-preview" id="posterCard">
+                <div class="poster-brand">ORDEXA</div>
+                <div class="poster-tagline">Touchless Queue Management</div>
+
+                <div class="poster-title" id="previewOrgName">Organization Name</div>
+                <div class="poster-subtitle" id="previewSubheading">Scan to get your digital queue token</div>
+
+                <div class="qr-box">
+                    <div id="qrcode"></div>
+                </div>
+
+                <div class="poster-steps">
+                    <div class="poster-step">① Scan QR</div>
+                    <div class="poster-step">② Get Token #</div>
+                    <div class="poster-step">③ Live Tracking</div>
+                </div>
+            </div>
+        </div>
+    </div>
+</main>
+
+<script src="../js/qr-codes.js" defer></script>
+</body>
+</html>

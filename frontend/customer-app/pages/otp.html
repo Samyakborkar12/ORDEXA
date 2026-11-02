@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Verify OTP - ORDEXA</title>
+    <link rel="stylesheet" href="../css/otp.css">
+    <link rel="icon" type="image/svg+xml" href="../assets/logo/ordexa-favicon.svg">
+</head>
+<body>
+
+<div class="auth-card">
+    <div class="logo">
+            <img src="../assets/logo/ordexa-logo.svg" alt="ORDEXA" class="welcome-logo-img">
+            <span>ORDEXA</span>
+        </div>
+    <div class="otp-icon">📲</div>
+    <div class="title">Verification Code</div>
+    <div class="subtitle">Enter the 6-digit verification code sent to your registered mobile / email.</div>
+
+    <form onsubmit="handleVerify(event)">
+        <div class="otp-inputs">
+            <input type="text" maxlength="1" class="otp-box" autofocus oninput="moveNext(this, 0)" onkeydown="handleBackspace(event, 0)">
+            <input type="text" maxlength="1" class="otp-box" oninput="moveNext(this, 1)" onkeydown="handleBackspace(event, 1)">
+            <input type="text" maxlength="1" class="otp-box" oninput="moveNext(this, 2)" onkeydown="handleBackspace(event, 2)">
+            <input type="text" maxlength="1" class="otp-box" oninput="moveNext(this, 3)" onkeydown="handleBackspace(event, 3)">
+            <input type="text" maxlength="1" class="otp-box" oninput="moveNext(this, 4)" onkeydown="handleBackspace(event, 4)">
+            <input type="text" maxlength="1" class="otp-box" oninput="moveNext(this, 5)" onkeydown="handleBackspace(event, 5)">
+        </div>
+
+        <button type="submit" class="btn-verify" id="verifyBtn">Verify & Proceed →</button>
+    </form>
+
+    <div class="resend-box">
+        Didn't receive code? 
+        <button class="resend-btn" id="resendBtn" disabled onclick="resendCode()">Resend (<span id="timer">45</span>s)</button>
+    </div>
+</div>
+
+<script src="../js/otp.js" defer></script>
+</body>
+</html>

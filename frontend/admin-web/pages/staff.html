@@ -1,0 +1,229 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>ORDEXA - Staff</title>
+
+    <link rel="stylesheet" href="../css/staff.css">
+
+    <link rel="icon" type="image/svg+xml" href="../assets/logo/ordexa-favicon.svg">
+</head>
+
+<body>
+
+
+<header class="topbar">
+
+    <div class="logo">
+        ORDEXA
+    </div>
+
+    <div class="admin">
+
+        <div id="adminName">
+            Admin
+        </div>
+
+        <div class="avatar" id="avatar">
+            A
+        </div>
+
+    </div>
+
+</header>
+
+
+<div class="layout">
+
+
+    <aside class="sidebar">
+
+        <div class="menu-title">
+            Management
+        </div>
+
+        <div
+            class="menu-item"
+            onclick="go('dashboard.html')">
+            🏠 Dashboard
+        </div>
+
+        <div
+            class="menu-item"
+            onclick="go('counters.html')">
+            🎫 Counters
+        </div>
+
+        <div
+            class="menu-item active">
+            👥 Staff
+        </div>
+
+        <div
+            class="menu-item"
+            onclick="go('profile.html')">
+            👤 Admin Profile
+        </div>
+
+        <div
+            class="menu-item logout"
+            onclick="logout()">
+            ↪ Logout
+        </div>
+
+    </aside>
+
+
+    <main class="main">
+
+        <div class="heading">
+
+            <div>
+
+                <h1>
+                    Staff
+                </h1>
+
+                <p>
+                    Manage staff members of your organization.
+                </p>
+
+            </div>
+
+            <button
+                class="add-btn"
+                onclick="openAddModal()">
+
+                + Add Staff
+
+            </button>
+
+        </div>
+
+
+        <div id="staffContainer"></div>
+
+    </main>
+
+</div>
+
+
+<!-- ADD / EDIT MODAL -->
+
+<div class="modal" id="staffModal">
+
+    <div class="modal-box">
+
+        <h2 id="modalTitle">
+            Add Staff
+        </h2>
+
+        <div
+            class="error"
+            id="errorMessage">
+        </div>
+
+
+        <form id="staffForm">
+
+            <label>
+                Staff Name
+            </label>
+
+            <input
+                id="name"
+                type="text"
+                placeholder="Enter staff name"
+                required
+            >
+
+
+            <label>
+                Email
+            </label>
+
+            <input
+                id="email"
+                type="email"
+                placeholder="Enter email"
+                required
+            >
+
+
+            <label>
+                Phone
+            </label>
+
+            <input
+                id="phone"
+                type="text"
+                placeholder="Enter phone number"
+            >
+
+
+            <label>
+                Role
+            </label>
+
+            <input
+                id="role"
+                type="text"
+                placeholder="e.g. Receptionist"
+                required
+            >
+
+
+            <label>
+                Status
+            </label>
+
+            <select id="status">
+
+                <option value="ACTIVE">
+                    Active
+                </option>
+
+                <option value="INACTIVE">
+                    Inactive
+                </option>
+
+            </select>
+
+
+            <div class="modal-buttons">
+
+                <button
+                    type="button"
+                    class="cancel"
+                    onclick="closeModal()">
+
+                    Cancel
+
+                </button>
+
+                <button
+                    type="submit"
+                    class="save"
+                    id="saveButton">
+
+                    Save Staff
+
+                </button>
+
+            </div>
+
+        </form>
+
+    </div>
+
+</div>
+
+
+<script src="../js/staff.js" defer></script>
+
+</body>
+</html>

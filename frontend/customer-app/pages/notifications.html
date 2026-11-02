@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Notifications - ORDEXA</title>
+
+    <link rel="stylesheet" href="../css/notifications.css">
+    <link rel="icon" type="image/svg+xml" href="../assets/logo/ordexa-favicon.svg">
+</head>
+
+<body>
+
+<header class="header">
+    <div class="header-top">
+        <button class="back-btn" onclick="goBack()">←</button>
+
+        <div>
+            <h1>Notifications</h1>
+            <p>Stay updated with your queue</p>
+        </div>
+
+        <button class="mark-all" onclick="markAllRead()">
+            Mark all
+        </button>
+    </div>
+</header>
+
+
+<main class="container">
+
+    <div id="loading" class="loading">
+        Loading notifications...
+    </div>
+
+    <div id="notificationList"></div>
+
+    <div id="emptyState" class="empty" style="display:none;">
+        <div class="empty-icon">🔔</div>
+        <h3>No notifications</h3>
+        <p>You don't have any notifications yet.</p>
+    </div>
+
+    <div id="errorState" class="error" style="display:none;">
+        <h3>Unable to load notifications</h3>
+        <p>Please check your connection and try again.</p>
+    </div>
+
+</main>
+
+
+<nav class="bottom-nav">
+
+    <a href="../pages/home.html" class="nav-item">
+        <span class="nav-icon">⌂</span>
+        Home
+    </a>
+
+    <a href="../pages/explore.html" class="nav-item">
+        <span class="nav-icon">⌕</span>
+        Explore
+    </a>
+
+    <a href="../pages/live-queue.html" class="nav-item">
+        <span class="nav-icon">▣</span>
+        My Queue
+    </a>
+
+    <a href="../pages/notifications.html" class="nav-item active">
+        <span class="nav-icon">🔔</span>
+        Alerts
+    </a>
+
+    <a href="../pages/profile.html" class="nav-item">
+        <span class="nav-icon">●</span>
+        Profile
+    </a>
+
+</nav>
+
+
+<div id="toast" class="toast"></div>
+
+
+<script src="../js/notifications.js" defer></script>
+
+</body>
+</html>

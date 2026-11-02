@@ -1,0 +1,383 @@
+* {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+            background: #071d33;
+            color: white;
+            min-height: 100vh;
+        }
+
+        /* HEADER */
+
+        .header {
+            height: 72px;
+            background: #0b2742;
+            border-bottom: 1px solid #174666;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding: 0 7%;
+            position: sticky;
+            top: 0;
+            z-index: 100;
+        }
+
+        .logo {
+            color: #19d3e6;
+            font-size: 25px;
+            font-weight: bold;
+            letter-spacing: 2px;
+        }
+
+        .header-right {
+            display: flex;
+            align-items: center;
+            gap: 20px;
+        }
+
+        .notification {
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+            background: #123753;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            cursor: pointer;
+            font-size: 18px;
+        }
+
+        .notification:hover {
+            background: #174866;
+        }
+
+        .profile {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            cursor: pointer;
+        }
+
+        .avatar {
+            width: 38px;
+            height: 38px;
+            border-radius: 50%;
+            background: #19d3e6;
+            color: #071d33;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-weight: bold;
+        }
+
+        .profile-name {
+            font-size: 14px;
+            color: #dceaf3;
+        }
+
+        /* MAIN */
+
+        .main {
+            width: 86%;
+            max-width: 1200px;
+            margin: auto;
+            padding: 40px 0 80px;
+        }
+
+        /* WELCOME */
+
+        .welcome {
+            margin-bottom: 35px;
+        }
+
+        .welcome h1 {
+            font-size: 34px;
+            margin-bottom: 8px;
+        }
+
+        .welcome h1 span {
+            color: #19d3e6;
+        }
+
+        .welcome p {
+            color: #9db4c8;
+            font-size: 15px;
+        }
+
+        /* SEARCH */
+
+        .search-box {
+            background: #0d2945;
+            border: 1px solid #174666;
+            border-radius: 14px;
+            padding: 8px;
+            display: flex;
+            align-items: center;
+            margin-bottom: 35px;
+        }
+
+        .search-icon {
+            padding: 0 12px;
+            color: #19d3e6;
+            font-size: 18px;
+        }
+
+        .search-box input {
+            flex: 1;
+            border: none;
+            outline: none;
+            background: transparent;
+            color: white;
+            font-size: 15px;
+            padding: 12px 5px;
+        }
+
+        .search-box input::placeholder {
+            color: #7892a6;
+        }
+
+        /* QUICK ACTIONS */
+
+        .section-title {
+            font-size: 20px;
+            margin-bottom: 18px;
+        }
+
+        .quick-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 18px;
+            margin-bottom: 40px;
+        }
+
+        .action-card {
+            background: #0d2945;
+            border: 1px solid #174666;
+            border-radius: 15px;
+            padding: 25px;
+            cursor: pointer;
+            transition: 0.2s;
+        }
+
+        .action-card:hover {
+            border-color: #19d3e6;
+            transform: translateY(-2px);
+        }
+
+        .action-icon {
+            width: 48px;
+            height: 48px;
+            border-radius: 12px;
+            background: #123753;
+            color: #19d3e6;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 22px;
+            margin-bottom: 16px;
+        }
+
+        .action-card h3 {
+            font-size: 17px;
+            margin-bottom: 7px;
+        }
+
+        .action-card p {
+            color: #8faabd;
+            font-size: 13px;
+            line-height: 1.5;
+        }
+
+        /* QUEUE CARD */
+
+        .queue-card {
+            background: #0d2945;
+            border: 1px solid #174666;
+            border-radius: 16px;
+            padding: 25px;
+            margin-bottom: 40px;
+        }
+
+        .queue-empty {
+            text-align: center;
+            padding: 25px 10px;
+        }
+
+        .queue-empty .icon {
+            font-size: 35px;
+            margin-bottom: 12px;
+        }
+
+        .queue-empty h3 {
+            margin-bottom: 8px;
+        }
+
+        .queue-empty p {
+            color: #8faabd;
+            font-size: 14px;
+            margin-bottom: 18px;
+        }
+
+        .primary-btn {
+            border: none;
+            background: #19d3e6;
+            color: #071d33;
+            padding: 12px 22px;
+            border-radius: 9px;
+            font-weight: bold;
+            cursor: pointer;
+        }
+
+        .primary-btn:hover {
+            opacity: 0.9;
+        }
+
+        /* FEATURES */
+
+        .features {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 18px;
+        }
+
+        .feature {
+            background: #0d2945;
+            border: 1px solid #174666;
+            border-radius: 15px;
+            padding: 22px;
+        }
+
+        .feature-icon {
+            color: #19d3e6;
+            font-size: 25px;
+            margin-bottom: 13px;
+        }
+
+        .feature h3 {
+            font-size: 16px;
+            margin-bottom: 7px;
+        }
+
+        .feature p {
+            color: #8faabd;
+            font-size: 13px;
+            line-height: 1.5;
+        }
+
+        /* BOTTOM NAV */
+
+        .bottom-nav {
+            position: fixed;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            height: 68px;
+            background: #0b2742;
+            border-top: 1px solid #174666;
+            display: flex;
+            justify-content: center;
+            z-index: 100;
+        }
+
+        .nav-inner {
+            width: 500px;
+            display: flex;
+            justify-content: space-around;
+            align-items: center;
+        }
+
+        .nav-item {
+            color: #7892a6;
+            text-align: center;
+            cursor: pointer;
+            font-size: 11px;
+            min-width: 70px;
+        }
+
+        .nav-item .nav-icon {
+            font-size: 20px;
+            margin-bottom: 4px;
+        }
+
+        .nav-item.active {
+            color: #19d3e6;
+        }
+
+        /* MOBILE */
+
+        @media (max-width: 700px) {
+
+            .header {
+                padding: 0 5%;
+            }
+
+            .profile-name {
+                display: none;
+            }
+
+            .main {
+                width: 90%;
+                padding-top: 30px;
+            }
+
+            .welcome h1 {
+                font-size: 28px;
+            }
+
+            .quick-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .features {
+                grid-template-columns: 1fr;
+            }
+
+            .header-right {
+                gap: 10px;
+            }
+        }
+
+/* ORDEXA Asset & Logo Styling */
+.sidebar-logo-img {
+    width: 28px;
+    height: 28px;
+    object-fit: contain;
+    vertical-align: middle;
+    flex-shrink: 0;
+}
+.sidebar .logo {
+    display: flex !important;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+}
+.app-logo-img {
+    width: 26px;
+    height: 26px;
+    object-fit: contain;
+    vertical-align: middle;
+    flex-shrink: 0;
+}
+.header .logo {
+    display: flex !important;
+    align-items: center;
+    gap: 10px;
+}
+.auth-logo-img, .brand-logo-img {
+    width: 46px;
+    height: 46px;
+    object-fit: contain;
+    display: block;
+    margin: 0 auto 12px;
+}
+.welcome-logo-img {
+    width: 44px;
+    height: 44px;
+    object-fit: contain;
+    vertical-align: middle;
+    margin-right: 10px;
+}

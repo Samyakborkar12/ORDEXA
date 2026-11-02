@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Notifications & Live Alerts - ORDEXA</title>
+    <link rel="stylesheet" href="../css/notifications.css">
+    <link rel="icon" type="image/svg+xml" href="../assets/logo/ordexa-favicon.svg">
+</head>
+<body>
+
+<!-- SIDEBAR -->
+<aside class="sidebar">
+    <div class="logo">
+        <img src="../assets/logo/ordexa-logo.svg" alt="ORDEXA" class="sidebar-logo-img">
+        ORD<span>EXA</span>
+    </div>
+    <nav class="nav">
+        <a href="dashboard.html">Dashboard</a>
+        <a href="counters.html">Counters</a>
+        <a href="live-queue.html">Live Queue</a>
+        <a href="walk-ins.html">Walk-ins</a>
+        <a href="services.html">Services</a>
+        <a href="staff.html">Staff</a>
+        <a href="customers.html">Customers</a>
+        <a href="qr-codes.html">QR Codes</a>
+        <a href="analytics.html">Analytics</a>
+        <a href="feedback.html">Feedback</a>
+        <a href="notifications.html" class="active">Notifications</a>
+        <a href="organization.html">Organization</a>
+        <a href="settings.html">Settings</a>
+    </nav>
+    <button class="logout" onclick="logout()">Logout</button>
+</aside>
+
+<!-- MAIN -->
+<main class="main">
+    <div class="topbar">
+        <div>
+            <h1>Notifications & Live Alerts</h1>
+            <p>Real-time queue monitoring events and automated operational alerts</p>
+        </div>
+        <button class="btn-action" onclick="markAllRead()">✓ Mark All as Read</button>
+    </div>
+
+    <div class="notif-container" id="notifList">
+        <!-- Rendered dynamically -->
+        <div class="notif-item unread">
+            <div class="notif-icon">🔔</div>
+            <div class="notif-content">
+                <div class="notif-title">High Queue Load Detected</div>
+                <div class="notif-message">Waiting list reached 10+ customers in Consultation service. Consider opening an additional counter.</div>
+                <div class="notif-time">Just now</div>
+            </div>
+        </div>
+
+        <div class="notif-item">
+            <div class="notif-icon">✅</div>
+            <div class="notif-content">
+                <div class="notif-title">Counter 1 - Shift Started</div>
+                <div class="notif-message">Staff member logged into Counter 1 and started serving tokens.</div>
+                <div class="notif-time">25 minutes ago</div>
+            </div>
+        </div>
+
+        <div class="notif-item">
+            <div class="notif-icon">ℹ️</div>
+            <div class="notif-content">
+                <div class="notif-title">System Daily Backup Complete</div>
+                <div class="notif-message">All queue metrics and session logs have been preserved safely in MySQL database.</div>
+                <div class="notif-time">2 hours ago</div>
+            </div>
+        </div>
+    </div>
+</main>
+
+<script src="../js/notifications.js" defer></script>
+</body>
+</html>

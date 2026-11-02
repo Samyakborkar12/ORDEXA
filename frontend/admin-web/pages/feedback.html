@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Customer Feedback & CSAT - ORDEXA</title>
+    <link rel="stylesheet" href="../css/feedback.css">
+    <link rel="icon" type="image/svg+xml" href="../assets/logo/ordexa-favicon.svg">
+</head>
+<body>
+
+<!-- SIDEBAR -->
+<aside class="sidebar">
+    <div class="logo">
+        <img src="../assets/logo/ordexa-logo.svg" alt="ORDEXA" class="sidebar-logo-img">
+        ORD<span>EXA</span>
+    </div>
+    <nav class="nav">
+        <a href="dashboard.html">Dashboard</a>
+        <a href="counters.html">Counters</a>
+        <a href="live-queue.html">Live Queue</a>
+        <a href="walk-ins.html">Walk-ins</a>
+        <a href="services.html">Services</a>
+        <a href="staff.html">Staff</a>
+        <a href="customers.html">Customers</a>
+        <a href="qr-codes.html">QR Codes</a>
+        <a href="analytics.html">Analytics</a>
+        <a href="feedback.html" class="active">Feedback</a>
+        <a href="notifications.html">Notifications</a>
+        <a href="organization.html">Organization</a>
+        <a href="settings.html">Settings</a>
+    </nav>
+    <button class="logout" onclick="logout()">Logout</button>
+</aside>
+
+<!-- MAIN -->
+<main class="main">
+    <div class="topbar">
+        <div>
+            <h1>Customer Feedback & Service Quality</h1>
+            <p>Real-time customer ratings and waiting experience reviews</p>
+        </div>
+    </div>
+
+    <div class="feedback-summary">
+        <div class="score-card">
+            <div class="big-rating">4.8</div>
+            <div class="stars">★★★★★</div>
+            <div style="font-size: 14px; color: #b0d4ec;">Overall Satisfaction Score</div>
+            <div style="font-size: 12px; color: #8bc8ee; margin-top: 4px;">Based on 142 completed visits</div>
+        </div>
+
+        <div class="breakdown-card">
+            <div class="rating-bar-row">
+                <span>5 Star</span>
+                <div class="rating-progress-bg"><div class="rating-progress-fill" style="width: 82%;"></div></div>
+                <span>82%</span>
+            </div>
+            <div class="rating-bar-row">
+                <span>4 Star</span>
+                <div class="rating-progress-bg"><div class="rating-progress-fill" style="width: 12%;"></div></div>
+                <span>12%</span>
+            </div>
+            <div class="rating-bar-row">
+                <span>3 Star</span>
+                <div class="rating-progress-bg"><div class="rating-progress-fill" style="width: 4%;"></div></div>
+                <span>4%</span>
+            </div>
+            <div class="rating-bar-row">
+                <span>2 Star</span>
+                <div class="rating-progress-bg"><div class="rating-progress-fill" style="width: 1%;"></div></div>
+                <span>1%</span>
+            </div>
+            <div class="rating-bar-row">
+                <span>1 Star</span>
+                <div class="rating-progress-bg"><div class="rating-progress-fill" style="width: 1%;"></div></div>
+                <span>1%</span>
+            </div>
+        </div>
+    </div>
+
+    <!-- RECENT REVIEWS -->
+    <div class="reviews-card">
+        <h2 style="font-size: 18px; color: #06283d; margin-bottom: 18px;">Recent Customer Reviews</h2>
+
+        <div class="review-item">
+            <div class="review-header">
+                <div>
+                    <span class="customer-name">Rahul Sharma</span>
+                    <span class="review-service-badge">Doctor Consultation</span>
+                </div>
+                <div>
+                    <span style="color: #ffc107;">★★★★★</span>
+                    <span class="review-date">Today at 11:45 AM</span>
+                </div>
+            </div>
+            <div class="review-comment">
+                "Loved the live token tracker on my mobile! I was able to have tea at the cafeteria without worrying about missing my turn at Counter 2."
+            </div>
+        </div>
+
+        <div class="review-item">
+            <div class="review-header">
+                <div>
+                    <span class="customer-name">Priya Patel</span>
+                    <span class="review-service-badge">Cash Deposit</span>
+                </div>
+                <div>
+                    <span style="color: #ffc107;">★★★★★</span>
+                    <span class="review-date">Today at 10:20 AM</span>
+                </div>
+            </div>
+            <div class="review-comment">
+                "Very smooth and organized system. The estimated wait time displayed on screen was within 2 minutes of the actual call."
+            </div>
+        </div>
+
+        <div class="review-item">
+            <div class="review-header">
+                <div>
+                    <span class="customer-name">Amit Verma</span>
+                    <span class="review-service-badge">Express Check-in</span>
+                </div>
+                <div>
+                    <span style="color: #ffc107;">★★★★☆</span>
+                    <span class="review-date">Yesterday at 4:10 PM</span>
+                </div>
+            </div>
+            <div class="review-comment">
+                "Quick service and touchless QR scan at the door was very convenient."
+            </div>
+        </div>
+    </div>
+</main>
+
+<script src="../js/feedback.js" defer></script>
+</body>
+</html>

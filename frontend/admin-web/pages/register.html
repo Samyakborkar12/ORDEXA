@@ -1,0 +1,214 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Register Admin | ORDEXA</title>
+
+    <link rel="stylesheet" href="../css/register.css">
+    <link rel="icon" type="image/svg+xml" href="../assets/logo/ordexa-favicon.svg">
+</head>
+
+<body>
+
+<div class="register-container">
+
+    <!-- LOGO -->
+
+    <div class="logo-section">
+
+        <div class="logo">
+            O
+        </div>
+
+        <div class="brand-name">
+            ORD<span>EXA</span>
+        </div>
+
+        <div class="brand-subtitle">
+            Queue Management System
+        </div>
+
+    </div>
+
+
+    <!-- REGISTER CARD -->
+
+    <div class="register-card">
+
+        <div class="title">
+            Create Admin Account
+        </div>
+
+        <div class="description">
+            Register your ORDEXA administrator account to manage
+            your organization and queue operations.
+        </div>
+
+
+        <!-- MESSAGE -->
+
+        <div id="message" class="message"></div>
+
+
+        <!-- FORM -->
+
+        <form id="registerForm">
+
+            <!-- NAME -->
+
+            <div class="form-group">
+
+                <label for="name">
+                    Full Name
+                </label>
+
+                <input
+                    type="text"
+                    id="name"
+                    name="name"
+                    placeholder="Enter your full name"
+                    autocomplete="name"
+                    required
+                >
+
+            </div>
+
+
+            <!-- EMAIL -->
+
+            <div class="form-group">
+
+                <label for="email">
+                    Email Address
+                </label>
+
+                <input
+                    type="email"
+                    id="email"
+                    name="email"
+                    placeholder="Enter your email"
+                    autocomplete="email"
+                    required
+                >
+
+            </div>
+
+
+            <!-- PASSWORD -->
+
+            <div class="form-group">
+
+                <label for="password">
+                    Password
+                </label>
+
+                <div class="input-wrapper">
+
+                    <input
+                        type="password"
+                        id="password"
+                        name="password"
+                        class="password-input"
+                        placeholder="Create a password"
+                        autocomplete="new-password"
+                        minlength="6"
+                        required
+                    >
+
+                    <button
+                        type="button"
+                        class="toggle-password"
+                        onclick="togglePassword('password', this)"
+                    >
+                        SHOW
+                    </button>
+
+                </div>
+
+                <div class="password-hint">
+                    Password must contain at least 6 characters.
+                </div>
+
+            </div>
+
+
+            <!-- CONFIRM PASSWORD -->
+
+            <div class="form-group">
+
+                <label for="confirmPassword">
+                    Confirm Password
+                </label>
+
+                <div class="input-wrapper">
+
+                    <input
+                        type="password"
+                        id="confirmPassword"
+                        name="confirmPassword"
+                        class="password-input"
+                        placeholder="Re-enter your password"
+                        autocomplete="new-password"
+                        minlength="6"
+                        required
+                    >
+
+                    <button
+                        type="button"
+                        class="toggle-password"
+                        onclick="togglePassword('confirmPassword', this)"
+                    >
+                        SHOW
+                    </button>
+
+                </div>
+
+            </div>
+
+
+            <!-- REGISTER BUTTON -->
+
+            <button
+                type="submit"
+                class="register-btn"
+                id="registerBtn"
+            >
+                Create Account
+            </button>
+
+        </form>
+
+
+        <!-- LOGIN -->
+
+        <div class="login-link">
+
+            Already have an account?
+
+            <a href="login.html">
+                Sign in
+            </a>
+
+        </div>
+
+
+        <!-- SECURITY -->
+
+        <div class="security-note">
+
+            🔒 Your password is securely protected by
+            BCrypt password hashing.
+
+        </div>
+
+    </div>
+
+</div>
+
+
+<script src="../js/register.js" defer></script>
+
+</body>
+</html>

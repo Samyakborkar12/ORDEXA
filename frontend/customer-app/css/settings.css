@@ -1,0 +1,199 @@
+* {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+            font-family: Arial, sans-serif;
+        }
+
+        body {
+            background: #071d33;
+            color: white;
+            min-height: 100vh;
+            padding-bottom: 90px;
+        }
+
+        /* HEADER */
+        .header {
+            height: 72px;
+            background: #0b2742;
+            border-bottom: 1px solid #174666;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding: 0 7%;
+            position: sticky;
+            top: 0;
+            z-index: 100;
+        }
+
+        .logo {
+            color: #19d3e6;
+            font-size: 25px;
+            font-weight: bold;
+            letter-spacing: 2px;
+            text-decoration: none;
+        }
+
+        .header-title {
+            font-size: 16px;
+            font-weight: 700;
+            color: #dceaf3;
+        }
+
+        /* MAIN */
+        .main {
+            width: 86%;
+            max-width: 600px;
+            margin: auto;
+            padding: 30px 0;
+        }
+
+        .settings-card {
+            background: #0d2945;
+            border: 1px solid #174666;
+            border-radius: 18px;
+            padding: 24px;
+            margin-bottom: 20px;
+        }
+
+        .section-title {
+            font-size: 15px;
+            font-weight: 700;
+            color: #19d3e6;
+            margin-bottom: 15px;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+        }
+
+        .setting-row {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 14px 0;
+            border-bottom: 1px solid #174666;
+        }
+
+        .setting-row:last-child {
+            border-bottom: none;
+        }
+
+        .setting-title {
+            font-size: 14px;
+            font-weight: 600;
+        }
+
+        .setting-desc {
+            font-size: 12px;
+            color: #8faabd;
+            margin-top: 2px;
+        }
+
+        .select-input {
+            padding: 8px 12px;
+            background: #071d33;
+            border: 1px solid #174666;
+            border-radius: 8px;
+            color: white;
+            font-size: 13px;
+            outline: none;
+        }
+
+        .toggle-switch {
+            width: 20px;
+            height: 20px;
+            accent-color: #19d3e6;
+            cursor: pointer;
+        }
+
+        .btn-clear {
+            width: 100%;
+            background: rgba(239, 68, 68, 0.15);
+            color: #ff8888;
+            border: 1px solid rgba(239, 68, 68, 0.3);
+            padding: 12px;
+            border-radius: 8px;
+            font-weight: bold;
+            font-size: 13px;
+            cursor: pointer;
+            transition: 0.2s;
+            margin-top: 10px;
+        }
+
+        .btn-clear:hover {
+            background: rgba(239, 68, 68, 0.25);
+        }
+
+        /* BOTTOM NAV */
+        .bottom-nav {
+            position: fixed;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            height: 68px;
+            background: #0b2742;
+            border-top: 1px solid #174666;
+            display: flex;
+            justify-content: center;
+            z-index: 100;
+        }
+
+        .nav-inner {
+            width: 500px;
+            display: flex;
+            justify-content: space-around;
+            align-items: center;
+        }
+
+        .nav-item {
+            color: #7892a6;
+            text-align: center;
+            cursor: pointer;
+            font-size: 11px;
+            min-width: 70px;
+        }
+
+        .nav-item .nav-icon {
+            font-size: 20px;
+            margin-bottom: 4px;
+        }
+
+/* ORDEXA Asset & Logo Styling */
+.sidebar-logo-img {
+    width: 28px;
+    height: 28px;
+    object-fit: contain;
+    vertical-align: middle;
+    flex-shrink: 0;
+}
+.sidebar .logo {
+    display: flex !important;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+}
+.app-logo-img {
+    width: 26px;
+    height: 26px;
+    object-fit: contain;
+    vertical-align: middle;
+    flex-shrink: 0;
+}
+.header .logo {
+    display: flex !important;
+    align-items: center;
+    gap: 10px;
+}
+.auth-logo-img, .brand-logo-img {
+    width: 46px;
+    height: 46px;
+    object-fit: contain;
+    display: block;
+    margin: 0 auto 12px;
+}
+.welcome-logo-img {
+    width: 44px;
+    height: 44px;
+    object-fit: contain;
+    vertical-align: middle;
+    margin-right: 10px;
+}

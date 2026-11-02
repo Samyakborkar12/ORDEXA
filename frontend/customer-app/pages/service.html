@@ -1,0 +1,379 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0">
+
+    <title>ORDEXA - Service</title>
+
+
+    <link rel="stylesheet" href="../css/service.css">
+
+    <link rel="icon" type="image/svg+xml" href="../assets/logo/ordexa-favicon.svg">
+</head>
+
+
+<body>
+
+
+<!-- ================================
+     HEADER
+================================= -->
+
+<header class="header">
+
+
+    <div class="logo" onclick="goHome()">
+        <img src="../assets/logo/ordexa-logo.svg" alt="ORDEXA" class="app-logo-img">
+        <span>ORDEXA</span>
+    </div>
+
+
+    <button
+        class="back-btn"
+        onclick="goBack()">
+
+        ← Back
+
+    </button>
+
+
+</header>
+
+
+
+<!-- ================================
+     MAIN
+================================= -->
+
+<main class="main">
+
+
+    <!-- LOADING -->
+
+    <div
+        id="loading"
+        class="loading">
+
+        Loading service...
+
+    </div>
+
+
+
+    <!-- ERROR -->
+
+    <div
+        id="error"
+        class="error">
+
+
+        <div id="errorText">
+
+            Unable to load service.
+
+        </div>
+
+
+        <button
+            class="retry-btn"
+            onclick="loadService()">
+
+            Retry
+
+        </button>
+
+
+    </div>
+
+
+
+    <!-- SERVICE CARD -->
+
+    <section
+        id="serviceCard"
+        class="service-card">
+
+
+        <!-- SERVICE HEADER -->
+
+        <div class="service-top">
+
+
+            <div class="service-icon">
+
+                ⚙
+
+            </div>
+
+
+            <div
+                id="status"
+                class="service-status">
+
+                AVAILABLE
+
+            </div>
+
+
+            <h1
+                id="serviceName"
+                class="service-name">
+
+                Service
+
+            </h1>
+
+
+            <div
+                id="organizationName"
+                class="organization">
+
+                Organization
+
+            </div>
+
+
+        </div>
+
+
+
+        <!-- DETAILS -->
+
+        <div class="details">
+
+
+            <h2>
+
+                About this service
+
+            </h2>
+
+
+
+            <p
+                id="description"
+                class="description">
+
+                Loading...
+
+            </p>
+
+
+
+            <!-- INFORMATION -->
+
+            <div class="info-grid">
+
+
+                <div class="info-box">
+
+
+                    <div class="info-label">
+
+                        AVERAGE SERVICE TIME
+
+                    </div>
+
+
+                    <div
+                        id="estimatedTime"
+                        class="info-value">
+
+                        -- min
+
+                    </div>
+
+
+                </div>
+
+
+
+                <div class="info-box">
+
+
+                    <div class="info-label">
+
+                        SERVICE STATUS
+
+                    </div>
+
+
+                    <div
+                        id="serviceStatus"
+                        class="info-value">
+
+                        --
+
+                    </div>
+
+
+                </div>
+
+
+            </div>
+
+
+
+            <!-- VIEW QUEUE STATUS -->
+
+            <button
+                id="viewQueueBtn"
+                class="view-queue-btn"
+                onclick="viewQueueStatus()">
+
+                View Queue Status
+
+            </button>
+
+
+
+            <!-- JOIN QUEUE -->
+
+            <button
+                id="joinBtn"
+                class="join-btn"
+                onclick="joinQueue()">
+
+                Join Queue
+
+            </button>
+
+
+        </div>
+
+
+    </section>
+
+
+</main>
+
+
+
+<!-- ================================
+     BOTTOM NAV
+================================= -->
+
+<nav class="bottom-nav">
+
+
+    <div class="nav-inner">
+
+
+        <!-- HOME -->
+
+        <div
+            class="nav-item"
+            onclick="goHome()">
+
+
+            <div class="nav-icon">
+
+                ⌂
+
+            </div>
+
+
+            Home
+
+        </div>
+
+
+
+        <!-- EXPLORE -->
+
+        <div
+            class="nav-item active"
+            onclick="goExplore()">
+
+
+            <div class="nav-icon">
+
+                🔎
+
+            </div>
+
+
+            Explore
+
+        </div>
+
+
+
+        <!-- MY QUEUE -->
+
+        <div
+            class="nav-item"
+            onclick="openQueue()">
+
+
+            <div class="nav-icon">
+
+                🎟
+
+            </div>
+
+
+            My Queue
+
+        </div>
+
+
+
+        <!-- ALERTS -->
+
+        <div
+            class="nav-item"
+            onclick="openNotifications()">
+
+
+            <div class="nav-icon">
+
+                🔔
+
+            </div>
+
+
+            Alerts
+
+        </div>
+
+
+
+        <!-- PROFILE -->
+
+        <div
+            class="nav-item"
+            onclick="openProfile()">
+
+
+            <div class="nav-icon">
+
+                👤
+
+            </div>
+
+
+            Profile
+
+        </div>
+
+
+    </div>
+
+
+</nav>
+
+
+
+<script src="../js/service.js" defer></script>
+
+
+</body>
+
+</html>
