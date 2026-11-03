@@ -10,11 +10,7 @@ ORDEXA – Smart Queue Management System
   <strong>Making Queue Management Smarter, Faster and More Efficient.</strong>
 </p>
 
-<!-- Add your project banner at assets/ordexa-banner.png -->
 
-<p align="center">
-  <img src="assets/ordexa-banner.png" alt="ORDEXA Project Banner" width="100%">
-</p>
 
 ---
 
