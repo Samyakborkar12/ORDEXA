@@ -395,10 +395,3 @@ Through this project, we gained practical experience in:
 
 This project is licensed under the MIT License. Refer to the `LICENSE` file for more information.
 
----
-
-\<p align="center">
-&#x20; \<strong>ORDEXA – Making Queue Management Smarter.\</strong>
-&#x20; \<br>
-&#x20; Built with teamwork, technology and innovation.
-\</p>
