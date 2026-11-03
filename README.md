@@ -1,15 +1,20 @@
-# ORDEXA – Smart Queue Management System
+ORDEXA – Smart Queue Management System
+<p align="center">
+  <img src="https://img.shields.io/badge/ORDEXA-SMART%20QUEUE%20MANAGEMENT-00D9FF?style=for-the-badge&labelColor=071B2E" alt="ORDEXA">
+  <img src="https://img.shields.io/badge/Java-Spring%20Boot-orange?style=for-the-badge&logo=openjdk" alt="Java Spring Boot">
+  <img src="https://img.shields.io/badge/Frontend-HTML%20%7C%20CSS%20%7C%20JavaScript-blue?style=for-the-badge" alt="Frontend">
+  <img src="https://img.shields.io/badge/Database-MySQL-4479A1?style=for-the-badge&logo=mysql&logoColor=white" alt="MySQL">
+</p>
 
-\<p align="center">
-&#x20; \<img src="[https://img.shields.io/badge/Project-ORDEXA-0A84FF?style=for-the-badge](https://img.shields.io/badge/Project-ORDEXA-0A84FF?style=for-the-badge)" alt="ORDEXA">
-&#x20; \<img src="[https://img.shields.io/badge/Java-Spring%20Boot-orange?style=for-the-badge&logo=openjdk](https://img.shields.io/badge/Java-Spring%20Boot-orange?style=for-the-badge\&logo=openjdk)" alt="Java">
-&#x20; \<img src="[https://img.shields.io/badge/Frontend-HTML%20%7C%20CSS%20%7C%20JavaScript-blue?style=for-the-badge](https://img.shields.io/badge/Frontend-HTML%20%7C%20CSS%20%7C%20JavaScript-blue?style=for-the-badge)" alt="Frontend">
-&#x20; \<img src="[https://img.shields.io/badge/Database-MySQL-blue?style=for-the-badge&logo=mysql](https://img.shields.io/badge/Database-MySQL-blue?style=for-the-badge\&logo=mysql)" alt="MySQL">
-\</p>
+<p align="center">
+  <strong>Making Queue Management Smarter, Faster and More Efficient.</strong>
+</p>
 
-\<p align="center">
-&#x20; \<strong>A smarter way to manage queues, reduce waiting time and improve service experiences.\</strong>
-\</p>
+<!-- Add your project banner at assets/ordexa-banner.png -->
+
+<p align="center">
+  <img src="assets/ordexa-banner.png" alt="ORDEXA Project Banner" width="100%">
+</p>
 
 ---
 
